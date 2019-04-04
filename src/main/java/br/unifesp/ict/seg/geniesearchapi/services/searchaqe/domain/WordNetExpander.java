@@ -1,20 +1,11 @@
 package br.unifesp.ict.seg.geniesearchapi.services.searchaqe.domain;
 
-import java.io.InputStream;
-import java.net.URL;
-
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Unmarshaller;
-
 import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure.QueryTerm;
-import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure.RelatedSearchResult;
+import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure.RelatedWords;
 
 public class WordNetExpander extends Expander {
 
-	private String relatedWordsServiceUrl;
-
 	public WordNetExpander(String relatedWordsServiceUrl) {
-		this.relatedWordsServiceUrl = relatedWordsServiceUrl;
 		super.setName(WORDNET_EXPANDER);
 		super.setClassNameExpander(true);
 		super.setMethodNameExpander(true);
@@ -23,11 +14,8 @@ public class WordNetExpander extends Expander {
 	}
 	
 	public void expandTerm(QueryTerm queryTerm) throws Exception {
-		String url = this.relatedWordsServiceUrl + "/GetRelated?word=" + queryTerm.getExpandedTerms().get(0);
-		InputStream ins = new URL(url).openStream();
-		JAXBContext context = JAXBContext.newInstance(RelatedSearchResult.class);
-		Unmarshaller marshaller = context.createUnmarshaller();
-		RelatedSearchResult result = (RelatedSearchResult) marshaller.unmarshal(ins);
+
+		RelatedWordsResult result = RelatedWords.getRelated(queryTerm.getExpandedTerms().get(0));
 
 		queryTerm.getExpandedTerms().addAll(result.getVerbs());
 		queryTerm.getExpandedTerms().addAll(result.getNouns());

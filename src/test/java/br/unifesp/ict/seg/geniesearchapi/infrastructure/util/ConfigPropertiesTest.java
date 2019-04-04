@@ -44,12 +44,6 @@ public class ConfigPropertiesTest {
 		connection.setRequestMethod("GET");
 		connection.connect();
 		assertEquals(200, connection.getResponseCode());
-
-		url = new URL(GenieSearchAPIConfig.getRelatedWordsServiceURL());
-		connection = (HttpURLConnection)url.openConnection();
-		connection.setRequestMethod("GET");
-		connection.connect();
-		assertEquals(200, connection.getResponseCode());
 	}
 
 	@Test

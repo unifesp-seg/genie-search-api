@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
 
-import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.GenieSearchAPIConfig;
 import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.domain.CodeVocabularyExpander;
 import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.domain.Expander;
 import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.domain.TypeExpander;
@@ -29,11 +28,9 @@ public class AQEApproach {
 	private List<QueryTerm> paramsTerms = new ArrayList<QueryTerm>();
 	
 	public AQEApproach() throws Exception {
-		this.relatedWordsServiceUrl = GenieSearchAPIConfig.getRelatedWordsServiceURL();
 	}
 
 	public AQEApproach(String expanders, boolean relaxReturn, boolean relaxParams, boolean contextRelevants, boolean filterMethodNameTermsByParameter) throws Exception {
-		this.relatedWordsServiceUrl = GenieSearchAPIConfig.getRelatedWordsServiceURL();
 		this.relaxReturn = relaxReturn;
 		this.relaxParams = relaxParams;
 		this.contextRelevants = contextRelevants;

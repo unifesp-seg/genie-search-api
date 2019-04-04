@@ -1,20 +1,11 @@
 package br.unifesp.ict.seg.geniesearchapi.services.searchaqe.domain;
 
-import java.io.InputStream;
-import java.net.URL;
-
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Unmarshaller;
-
 import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure.QueryTerm;
-import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure.RelatedSearchResult;
+import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure.RelatedWords;
 
 public class CodeVocabularyExpander extends Expander {
 
-	private String relatedWordsServiceUrl;
-
 	public CodeVocabularyExpander(String relatedWordsServiceUrl) {
-		this.relatedWordsServiceUrl = relatedWordsServiceUrl;
 		super.setName(CODE_VOCABULARY_EXPANDER);
 		super.setMethodNameExpander(true);
 		super.setParamExpander(false);
@@ -22,14 +13,10 @@ public class CodeVocabularyExpander extends Expander {
 	}
 	
 	public void expandTerm(QueryTerm queryTerm) throws Exception {
-		String url = this.relatedWordsServiceUrl + "/GetRelated?word=" + queryTerm.getExpandedTerms().get(0);
-		InputStream ins = new URL(url).openStream();
-		JAXBContext context = JAXBContext.newInstance(RelatedSearchResult.class);
-		Unmarshaller marshaller = context.createUnmarshaller();
-		RelatedSearchResult result = (RelatedSearchResult) marshaller.unmarshal(ins);
+
+		RelatedWordsResult result = RelatedWords.getRelated(queryTerm.getExpandedTerms().get(0));
 
 		queryTerm.getExpandedTerms().addAll(result.getCodeRelatedSyns());
-		
 		queryTerm.getExpandedTermsNot().addAll(result.getCodeRelatedAntons());
 	}
 }

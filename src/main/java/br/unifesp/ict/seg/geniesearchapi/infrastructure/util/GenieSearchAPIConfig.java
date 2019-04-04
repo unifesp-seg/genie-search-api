@@ -54,8 +54,4 @@ public class GenieSearchAPIConfig {
 		return REPO_PATH() + File.pathSeparator + "crawled-projects";
 	}
 
-	public static String getRelatedWordsServiceURL() throws Exception {
-		return WEBSERVER_URL() + "/related-words-service";
-	}
-
 }

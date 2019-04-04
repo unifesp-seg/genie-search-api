@@ -12,7 +12,7 @@ import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure.Query
 
 
 public class AQEApproachTest {
-
+	
 	@Test
 	public void camelCase() throws Exception {
 		String s = "getLongValue";

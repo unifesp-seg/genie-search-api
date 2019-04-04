@@ -29,7 +29,7 @@ public class AQEApproach {
 	private List<QueryTerm> paramsTerms = new ArrayList<QueryTerm>();
 	
 	public AQEApproach() throws Exception {
-		this(GenieSearchAPIConfig.AQE_EXPANDERS(), GenieSearchAPIConfig.AQE_RELAX_RETURN(), GenieSearchAPIConfig.AQE_RELAX_PARAMS(), GenieSearchAPIConfig.AQE_CONTEXT_RELEVANTS(), GenieSearchAPIConfig.AQE_FILTER_METHOD_NAME_TERMS_BY_PARAMETER());
+		this.relatedWordsServiceUrl = GenieSearchAPIConfig.getRelatedWordsServiceURL();
 	}
 
 	public AQEApproach(String expanders, boolean relaxReturn, boolean relaxParams, boolean contextRelevants, boolean filterMethodNameTermsByParameter) throws Exception {

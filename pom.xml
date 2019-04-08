@@ -15,6 +15,13 @@
 			<version>2.5</version>
 		</dependency>
 
+		<!-- commons-csv -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-csv</artifactId>
+		    <version>1.4</version>
+		</dependency>
+
 		<!-- sourcerer-services -->
 		<dependency>
 			<groupId>edu.uci.ics.sourcerer</groupId>

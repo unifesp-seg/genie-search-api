@@ -1,8 +1,15 @@
 package br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure;
 
+import java.io.FileReader;
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+import java.util.stream.Collectors;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVRecord;
+import org.apache.commons.lang.StringUtils;
 
 import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.domain.RelatedWordsResult;
 import edu.smu.tspell.wordnet.AdjectiveSynset;
@@ -15,7 +22,7 @@ import edu.smu.tspell.wordnet.WordSense;
 
 public class RelatedWords {
 
-	public static RelatedWordsResult getRelated(String word) {
+	public static RelatedWordsResult getRelated(String word) throws Exception {
 
 		RelatedWordsResult relatedWordsResult = new RelatedWordsResult();
 
@@ -26,6 +33,9 @@ public class RelatedWords {
 	}
 
 	private static void loadWordnetRelated(RelatedWordsResult relatedWordsResult, String word) {
+
+		if(StringUtils.isBlank(word))
+			return;
 
 		String wordNetDatabasePath = ClassLoader.getSystemResource("thesauri/wordnet-database").getPath();
 		System.setProperty("wordnet.database.dir", wordNetDatabasePath);
@@ -106,43 +116,78 @@ public class RelatedWords {
 		relatedWordsResult.getAdjectiveAntonyms().addAll(adjAntonyms);
 	}
 
-	private static void loadCodeRelated(RelatedWordsResult relatedWordsResult, String word) {
-//
-//		List<String> synList = new LinkedList<String>();
-//		List<String> antonymList = new LinkedList<String>();
-//
-//		Query query = session.createQuery(GET_RELATED_BY_WORD);
-//		query.setParameter("word", word);
-//		List<Object[]> resultList = query.list();
-//
-//		for (Object[] lo : resultList) {
-//			if (((String) lo[2]).equals("s")) {
-//				String syn = "";
-//				if (((String) lo[1]).equals(word))
-//					syn = (String) lo[0];
-//				else
-//					syn = (String) lo[1];
-//				synList.add(syn);
-//				addAntonyms(syn, antonymList, session);
-//			} else if (((String) lo[2]).equals("a")) {
-//				String ant = "";
-//				if (((String) lo[1]).equals(word))
-//					ant = (String) lo[0];
-//				else
-//					ant = (String) lo[1];
-//				if (!word.contains(ant))
-//					antonymList.add(ant);
-//				addSynonyms(ant, antonymList, session);
-//			}
-//		}
-//
-//		session.close();
-//
-//		relatedWordsResult.getCodeRelatedSyns().addAll(synList);
-//		relatedWordsResult.getCodeRelatedAntons().addAll(antonymList);
+	private static void loadCodeRelated(RelatedWordsResult relatedWordsResult, String word) throws Exception {
+		RelatedWordsResult relatedCodeResult = getSynonymsAndAntonymsCodeRelated(word);
+		
+		List<String> syns = new ArrayList<>(relatedCodeResult.getCodeRelatedSyns());
+		List<String> ants = new ArrayList<>(relatedCodeResult.getCodeRelatedAntons());
+		
+		for (String syn : relatedCodeResult.getCodeRelatedSyns()) {
+			relatedCodeResult = getSynonymsAndAntonymsCodeRelated(syn);
+			syns.addAll(relatedCodeResult.getCodeRelatedSyns());
+			ants.addAll(relatedCodeResult.getCodeRelatedAntons());
+		}
+		for (String ant : relatedCodeResult.getCodeRelatedAntons()) {
+			relatedCodeResult = getSynonymsAndAntonymsCodeRelated(ant);
+			ants.addAll(relatedCodeResult.getCodeRelatedSyns());
+			syns.addAll(relatedCodeResult.getCodeRelatedAntons());
+		}
+		
+		//Remove parameter word
+		while(syns.remove(word));
+		while(ants.remove(word));
 
+		//Remove duplicates
+		syns = syns.stream().distinct().collect(Collectors.toList());
+		ants = ants.stream().distinct().collect(Collectors.toList());
+		
+		
+		relatedWordsResult.getCodeRelatedSyns().addAll(syns);
+		relatedWordsResult.getCodeRelatedAntons().addAll(ants);
 	}
+	
+	private static RelatedWordsResult getSynonymsAndAntonymsCodeRelated(String word) throws Exception {
+		
+		if(StringUtils.isBlank(word))
+			return null;
+		
+		Reader codeDatabase = new FileReader(ClassLoader.getSystemResource("thesauri/code-database.csv").getPath());
+		Iterable<CSVRecord> records = CSVFormat.RFC4180.parse(codeDatabase);
 
+		List<String> syns = new ArrayList<String>();
+		List<String> ants = new ArrayList<String>();
+		
+		for (CSVRecord record : records) {
+		    String word1 = record.get(0).trim();
+		    String word2 = record.get(1).trim();
+		    String type = record.get(2).trim();
+		    
+		    boolean isSynonymous = "s".equalsIgnoreCase(type) || "b".equalsIgnoreCase(type);
+		    
+		    String related = null;
+		    if(word.equalsIgnoreCase(word1)) {
+		    	related = word2;
+		    }else if (word.equalsIgnoreCase(word2)) {
+		    	related = word1;
+		    }
+		    
+		    if(related != null) {
+		    	if(isSynonymous) {
+		    		syns.add(related);
+		    	}else {
+		    		ants.add(related);
+		    	}
+		    }
+		}
+		
+		RelatedWordsResult relatedCodeResults = new RelatedWordsResult();
+		
+		relatedCodeResults.setCodeRelatedSyns(syns);
+		relatedCodeResults.setCodeRelatedAntons(ants);
+		
+		return relatedCodeResults;
+	}
+	
 	private static String camelCaseSplit(String word) {
 		return word.replaceAll(String.format("%s|%s|%s", "(?<=[A-Z])(?=[A-Z][a-z])", "(?<=[^A-Z])(?=[A-Z])",
 				"(?<=[A-Za-z])(?=[^A-Za-z])"), " ");

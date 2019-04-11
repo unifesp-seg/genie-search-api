@@ -116,7 +116,7 @@ public class SourcererQueryBuilder {
 	
 	public SearchResult search(String methodName, String returnType, String params) throws Exception {
 		String query = this.getSourcererExpandedQuery(methodName, returnType, params);
-		SearchAdapter searchAdapter = SearchAdapter.create(GenieSearchAPIConfig.WEBSERVER_URL());
+		SearchAdapter searchAdapter = SearchAdapter.create(GenieSearchAPIConfig.getWebServerURL());
 		SearchResult searchResult = searchAdapter.search(query);
 		return searchResult;
 	}

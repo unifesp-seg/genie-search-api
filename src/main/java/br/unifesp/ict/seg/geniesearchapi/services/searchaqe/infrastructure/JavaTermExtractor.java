@@ -103,6 +103,9 @@ public class JavaTermExtractor {
 	 */
 	public static String getFQNTermsAsString(String fqn) {
 
+		if(fqn == null)
+			return null;
+		
 		String[] fragments = fqn.split(FQN_SPLIT_CHARS);
 		
 		if (fragments == null || fragments.length <= 0)

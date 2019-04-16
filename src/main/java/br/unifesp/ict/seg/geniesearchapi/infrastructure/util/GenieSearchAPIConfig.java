@@ -121,6 +121,11 @@ public class GenieSearchAPIConfig {
 			dir.mkdirs();
 	}
 
+	public static void activate() {
+		//Only for initialize static constructor class
+	}
+
+	
 	public static Path getRepoPath() {
 		return Paths.get(properties.getProperty("input-repo")).getParent();
 }

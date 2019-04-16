@@ -35,35 +35,6 @@ public class CompileMethodTest {
 	}
 
 	@Test
-	public void extractSlicedZipFile1() throws Exception {
-		boolean result = CompileMethod.extractSlicedZipFile(entityId1);
-		File extractedPath = Paths.get(GenieSearchAPIConfig.getExtractTempPath()+"", entityId1+"", "src").toFile();
-		File inner = Paths.get(extractedPath.getPath(), "net/java/otr4j/context").toFile();
-
-		assertTrue(result);
-		assertTrue(extractedPath.isDirectory());
-		assertTrue(inner.isDirectory());
-		assertEquals(1, extractedPath.list().length);
-		assertEquals(2, inner.list().length);
-		assertEquals("ConnContext.java", inner.list()[0]);
-		assertEquals("ConnContextService.java", inner.list()[1]);
-	}
-
-	@Test
-	public void extractSlicedZipFile2() throws Exception {
-		boolean result = CompileMethod.extractSlicedZipFile(entityId2);
-		File extractedPath = Paths.get(GenieSearchAPIConfig.getExtractTempPath()+"", entityId2+"", "src").toFile();
-		File inner = Paths.get(extractedPath.getPath(), "org\\atinject\\tck\\auto").toFile();
-
-		assertTrue(result);
-		assertTrue(extractedPath.isDirectory());
-		assertTrue(inner.isDirectory());
-		assertEquals(1, extractedPath.list().length);
-		assertEquals(1, inner.list().length);
-		assertEquals("Tire.java", inner.list()[0]);
-	}
-
-	@Test
 	public void generateBuildXml() throws Exception {
 
 		//interface_metrics_id: 3178472 = 12709553: entity_id

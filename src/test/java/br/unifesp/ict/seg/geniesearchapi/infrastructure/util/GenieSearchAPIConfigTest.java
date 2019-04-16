@@ -53,16 +53,9 @@ public class GenieSearchAPIConfigTest {
 			connection.connect();
 			assertEquals(200, connection.getResponseCode());
 		} catch (Exception e) {
-			assertTrue(e.equals(""));
+			e.printStackTrace();
 		
 		}
 	}
 
-	@Test
-	//TODO implementar
-	public void checkDatabaseConnection() throws Exception {
-		
-
-		//assert
-	}
 }

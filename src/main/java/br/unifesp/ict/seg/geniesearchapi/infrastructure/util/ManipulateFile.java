@@ -39,8 +39,6 @@ public class ManipulateFile {
 				String fileName = entry.getName();
 				File newFile = new File(outputDir + File.separator + fileName);
 
-				System.out.println("file unzip : " + newFile.getAbsoluteFile());
-
 				// create all non exists folders
 				// else you will hit FileNotFoundException for compressed folder
 				new File(newFile.getParent()).mkdirs();

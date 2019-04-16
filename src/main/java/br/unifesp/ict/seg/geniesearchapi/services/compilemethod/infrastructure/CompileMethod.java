@@ -12,6 +12,7 @@ import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.Project;
 import org.apache.tools.ant.ProjectHelper;
 
+import br.unifesp.ict.seg.geniesearchapi.domain.GenieMethod;
 import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.GenieSearchAPIConfig;
 import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.ManipulateFile;
 import edu.uci.ics.sourcerer.services.slicer.SlicerFactory;
@@ -96,7 +97,16 @@ public class CompileMethod {
 		return true;
 	}
 
-	public static boolean generateJar(int entityId) {
+	public static boolean generateJar(long entityId) {
+		
+		GenieMethod genieMethod = new GenieMethod(entityId);
+		
+		//Dependences
+		if(!genieMethod.isContainsSlicedFile()) {
+			
+		}
+		
+		
 		File buildFile = Paths.get(GenieSearchAPIConfig.getExtractTempPath()+"", entityId+"","build.xml").toFile();
 
 		// Prepare Ant project
@@ -120,7 +130,6 @@ public class CompileMethod {
         }
 		return true;
 	}
-	
 	
 	public static boolean clearCompileMethdoFiles(int entityId) {
 		return false;

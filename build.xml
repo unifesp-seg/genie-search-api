@@ -4,7 +4,7 @@
 
 	<!-- Propriedades -->
     <property environment="env"/>
-	<property name="version" value="1.4.2" />
+	<property name="version" value="1.4.3" />
 	<property name="bin" location="target/classes" />
 	<property name="dist" location="dist" />
 	<property name="maven-repo" location="C:/Users/\adrianocarv/.m2/repository" />

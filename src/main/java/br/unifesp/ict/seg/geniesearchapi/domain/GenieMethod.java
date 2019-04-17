@@ -238,6 +238,13 @@ public class GenieMethod {
 	}
 
 	//
+	// SOURCERER SOURCE CODE
+	//
+	public String getSourceCode() {
+		return "";
+	}
+	
+	//
 	// SLICE AND EXECUTION PROCESS
 	//
 	public Path getSlicedFilePath() {
@@ -256,9 +263,6 @@ public class GenieMethod {
 		return this.getCompiledJarPath().toFile().isFile();
 	}
 	
-	//
-	// EXECUTION PROCESS
-	//
 	public boolean slice() {
 		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Slicing...");
 
@@ -373,6 +377,17 @@ public class GenieMethod {
 		return true;
 	}
 
+	public Object execute(Object... executeParamsValues) throws Exception {
+		
+		String strArgs = "";
+		for(Object arg : executeParamsValues) {
+			strArgs += arg+", ";
+		}
+		strArgs = StringUtils.removeEnd(strArgs, ", ");
+		
+		return this.execute(strArgs);
+	}
+	
 	public Object execute(String executeParamsValues) throws Exception {
 		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Executing method...");
 
@@ -536,8 +551,6 @@ public class GenieMethod {
 		
 		return executionParamValues;
 	}
-	
-
 	
 	private Object getExecutionClassValue(String value, Class<?> className) {
 

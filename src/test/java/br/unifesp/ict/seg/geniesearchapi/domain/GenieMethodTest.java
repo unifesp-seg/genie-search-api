@@ -2,13 +2,14 @@ package br.unifesp.ict.seg.geniesearchapi.domain;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
-import java.nio.file.Paths;
-
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import br.unifesp.ict.seg.geniesearchapi.infrastructure.GenieMethodRepository;
 import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.GenieSearchAPIConfig;
@@ -152,58 +153,38 @@ public class GenieMethodTest {
 	}
 
 	@Test
-	public void execute2() {
+	public void execute2() throws Exception {
 		Object result = null;
-		try {
-			GenieMethod genieMethod = genieMethodRepository.findByEntityId(12955908);
-			assertTrue(genieMethod.isAllowsExecution());
-			result = genieMethod.execute("25,C:/_mestrado/smis-test/tempfile.txt");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		GenieMethod genieMethod = genieMethodRepository.findByEntityId(12955908);
+		assertTrue(genieMethod.isAllowsExecution());
+		result = genieMethod.execute("25,C:/_mestrado/smis-test/tempfile.txt");
 		assertEquals(Long.class, result.getClass());
 		assertEquals(new Long("25"), result);
 	}
 
-	@Test
-	public void clearMethodFiles() throws Exception {
-		// interface_metrics_id: 3178472 = 12709553: entity_id
-		long entityId = 12709553;
+	@Rule
+	public ExpectedException expectedEx = ExpectedException.none();
 
-		GenieMethod genieMethod = genieMethodRepository.findByEntityId(entityId);
+	@Test
+	public void executeVarargs() throws Exception {
+		Object result = null;
+		GenieMethod genieMethod = genieMethodRepository.findByEntityId(12955908);
 		assertTrue(genieMethod.isAllowsExecution());
 
-		// Without files
-		boolean cleaned = genieMethod.clearMethodFiles();
-		assertTrue(cleaned);
-		assertFalse(genieMethod.isContainsSlicedFile());
-		assertFalse(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile().isDirectory());
-		assertFalse(genieMethod.isContainsCompiledJar());
+		result = genieMethod.execute(25, "C:/_mestrado/smis-test/tempfile.txt");
+		assertEquals(Long.class, result.getClass());
+		assertEquals(new Long("25"), result);
 
-		// With files
-		genieMethod.execute("4");
-		assertTrue(genieMethod.isContainsSlicedFile());
-		assertTrue(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile().isDirectory());
-		assertTrue(genieMethod.isContainsCompiledJar());
+		expectedEx.expect(RuntimeException.class);
+		expectedEx.expectMessage("Parâmetros inválidos. Considere: long,java.lang.String");
+		result = genieMethod.execute();
+	}
 
-		// Without files
-		cleaned = genieMethod.clearMethodFiles();
-		assertTrue(cleaned);
-		assertFalse(genieMethod.isContainsSlicedFile());
-		assertFalse(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile().isDirectory());
-		assertFalse(genieMethod.isContainsCompiledJar());
-
-		// Slice
-		genieMethod.slice();
-		assertTrue(genieMethod.isContainsSlicedFile());
-		assertFalse(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile().isDirectory());
-		assertFalse(genieMethod.isContainsCompiledJar());
-
-		// Compiled jar
-		genieMethod.generateJar();
-		assertTrue(genieMethod.isContainsSlicedFile());
-		assertTrue(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile().isDirectory());
-		assertTrue(genieMethod.isContainsCompiledJar());
+	@Test
+	public void getSourceCode() throws Exception {
+		// TODO implementar
+		GenieMethod genieMethod = genieMethodRepository.findByEntityId(12709553);
+		assertNotNull(genieMethod.getSourceCode());
 	}
 
 }

@@ -24,6 +24,7 @@ import org.apache.tools.ant.Project;
 import org.apache.tools.ant.ProjectHelper;
 
 import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.GenieSearchAPIConfig;
+import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.LogUtils;
 import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.ManipulateFile;
 import br.unifesp.ict.seg.geniesearchapi.services.compilemethod.infrastructure.ThreadExecObject;
 import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure.JavaTermExtractor;
@@ -259,6 +260,7 @@ public class GenieMethod {
 	// EXECUTION PROCESS
 	//
 	public boolean slice() {
+		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Slicing...");
 
 		//Dependences
 		if(this.isContainsSlicedFile())
@@ -293,6 +295,7 @@ public class GenieMethod {
 	}
 	
 	private boolean extractSlicedZipFile() {
+		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Extracting sliced zip file...");
 
 		String zipFile = Paths.get(GenieSearchAPIConfig.getSlicedPath()+"", this.entityId + ".zip")+"";
 		File outputDir = Paths.get(GenieSearchAPIConfig.getExtractTempPath()+"", this.entityId+"", "src").toFile();
@@ -304,6 +307,7 @@ public class GenieMethod {
 	}
 
 	private boolean generateBuildXml() {
+		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Generating Build.xml...");
 
 		Path tempEntityPath = Paths.get(GenieSearchAPIConfig.getExtractTempPath()+"", this.entityId +"");
 		Path buildFilePath = Paths.get(tempEntityPath+"","build.xml");
@@ -335,6 +339,7 @@ public class GenieMethod {
 	}
 
 	public boolean generateJar() throws Exception {
+		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Generating compiled jar...");
 		
 		//Dependences
 		boolean resultProess = true;
@@ -369,6 +374,7 @@ public class GenieMethod {
 	}
 
 	public Object execute(String executeParamsValues) throws Exception {
+		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Executing method...");
 
 		//Validation
 		if (!this.isLoadedDB)
@@ -433,6 +439,7 @@ public class GenieMethod {
 			URL[] myJars = { this.getCompiledJarPath().toUri().toURL() };
 			URLClassLoader child = new URLClassLoader(myJars, this.getClass().getClassLoader());
 			reflectionClass = Class.forName(this.getAbsoluteClassName(), true, child);
+			child.close();
 		} else if (this.isJavaLibrary()) {
 			reflectionClass = Class.forName(this.getAbsoluteClassName());
 		}
@@ -558,21 +565,27 @@ public class GenieMethod {
 	
 	public boolean clearMethodFiles() throws IOException {
 		
+		boolean cleaned = false;
+		
 		if(this.isContainsSlicedFile()) {
-			this.getSlicedFilePath().toFile().delete();
+			LogUtils.getLogger().info("Entity_id: " + this.entityId + " Deleting: " + this.getSlicedFilePath());
+			cleaned = this.getSlicedFilePath().toFile().delete();
 		}
 			
 		
 		File tempIdDir = Paths.get(GenieSearchAPIConfig.getExtractTempPath()+"", this.entityId+"").toFile();
 		if(tempIdDir.isDirectory()) {
+			LogUtils.getLogger().info("Entity_id: " + this.entityId + " Deleting: " + tempIdDir);
 			FileUtils.deleteDirectory(tempIdDir);
+			cleaned = !tempIdDir.isDirectory();
 		}
 		
 		if(this.isContainsCompiledJar()) {
-			this.getCompiledJarPath().toFile().delete();
+			LogUtils.getLogger().info("Entity_id: " + this.entityId + " Deleting: " + getCompiledJarPath());
+			cleaned = this.getCompiledJarPath().toFile().delete();
 		}
 		
-		return true;
+		return cleaned;
 	}
 
 	@Override

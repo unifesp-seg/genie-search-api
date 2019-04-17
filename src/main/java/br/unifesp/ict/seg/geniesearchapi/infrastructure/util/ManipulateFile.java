@@ -56,9 +56,6 @@ public class ManipulateFile {
 
 			zipStream.closeEntry();
 			zipStream.close();
-
-			System.out.println("Done");
-
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}

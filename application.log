@@ -1,800 +1,370 @@
-Tue, 16/04/2019 10:24:28 - Genie Search API
-Tue, 16/04/2019 10:24:28 - 
-Tue, 16/04/2019 10:24:28 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:24:28 - 
-Tue, 16/04/2019 10:24:28 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:24:28 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:24:28 - database-user = root
-Tue, 16/04/2019 10:24:28 - database-password = ***
-Tue, 16/04/2019 10:24:28 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:24:28 - 
-Tue, 16/04/2019 10:24:28 - Genie Search API
-Tue, 16/04/2019 10:24:28 - 
-Tue, 16/04/2019 10:24:36 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 10:24:36 - With values: 300
-Tue, 16/04/2019 10:24:36 - Result = 44
-Tue, 16/04/2019 10:24:36 - 
-Tue, 16/04/2019 10:26:08 - Genie Search API
-Tue, 16/04/2019 10:26:08 - 
-Tue, 16/04/2019 10:26:08 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:26:08 - 
-Tue, 16/04/2019 10:26:08 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:26:08 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:26:08 - database-user = root
-Tue, 16/04/2019 10:26:08 - database-password = ***
-Tue, 16/04/2019 10:26:08 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:26:08 - 
-Tue, 16/04/2019 10:26:08 - Genie Search API
-Tue, 16/04/2019 10:26:08 - 
-Tue, 16/04/2019 10:26:14 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 10:26:14 - With values: 300
-Tue, 16/04/2019 10:26:14 - Result = 44
-Tue, 16/04/2019 10:26:14 - 
-Tue, 16/04/2019 10:27:06 - Genie Search API
-Tue, 16/04/2019 10:27:06 - 
-Tue, 16/04/2019 10:27:06 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:27:06 - 
-Tue, 16/04/2019 10:27:06 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:27:06 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:27:06 - database-user = root
-Tue, 16/04/2019 10:27:06 - database-password = ***
-Tue, 16/04/2019 10:27:06 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:27:06 - 
-Tue, 16/04/2019 10:27:06 - Genie Search API
-Tue, 16/04/2019 10:27:06 - 
-Tue, 16/04/2019 10:27:07 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 10:27:07 - With values: 300
-Tue, 16/04/2019 10:27:07 - Result = 44
-Tue, 16/04/2019 10:27:07 - 
-Tue, 16/04/2019 10:28:10 - Genie Search API
-Tue, 16/04/2019 10:28:10 - 
-Tue, 16/04/2019 10:28:10 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:28:10 - 
-Tue, 16/04/2019 10:28:10 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:28:10 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:28:10 - database-user = root
-Tue, 16/04/2019 10:28:10 - database-password = ***
-Tue, 16/04/2019 10:28:10 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:28:10 - 
-Tue, 16/04/2019 10:28:10 - Genie Search API
-Tue, 16/04/2019 10:28:10 - 
-Tue, 16/04/2019 10:28:10 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 10:28:10 - With values: 300
-Tue, 16/04/2019 10:28:10 - Result = 44
-Tue, 16/04/2019 10:28:10 - 
-Tue, 16/04/2019 10:30:15 - Genie Search API
-Tue, 16/04/2019 10:30:15 - 
-Tue, 16/04/2019 10:30:15 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:30:15 - 
-Tue, 16/04/2019 10:30:15 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:30:15 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:30:15 - database-user = root
-Tue, 16/04/2019 10:30:15 - database-password = ***
-Tue, 16/04/2019 10:30:15 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:30:15 - 
-Tue, 16/04/2019 10:30:15 - Genie Search API
-Tue, 16/04/2019 10:30:15 - 
-Tue, 16/04/2019 10:30:15 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 10:30:15 - With values: 300
-Tue, 16/04/2019 10:30:15 - Result = 44
-Tue, 16/04/2019 10:30:15 - 
-Tue, 16/04/2019 10:30:22 - Genie Search API
-Tue, 16/04/2019 10:30:22 - 
-Tue, 16/04/2019 10:30:22 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:30:22 - 
-Tue, 16/04/2019 10:30:22 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:30:22 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:30:22 - database-user = root
-Tue, 16/04/2019 10:30:22 - database-password = ***
-Tue, 16/04/2019 10:30:22 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:30:22 - 
-Tue, 16/04/2019 10:30:22 - Genie Search API
-Tue, 16/04/2019 10:30:22 - 
-Tue, 16/04/2019 10:30:22 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 10:30:22 - With values: 300
-Tue, 16/04/2019 10:30:22 - Result = 44
-Tue, 16/04/2019 10:30:22 - 
-Tue, 16/04/2019 10:30:25 - Genie Search API
-Tue, 16/04/2019 10:30:25 - 
-Tue, 16/04/2019 10:30:25 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:30:25 - 
-Tue, 16/04/2019 10:30:25 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:30:25 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:30:25 - database-user = root
-Tue, 16/04/2019 10:30:25 - database-password = ***
-Tue, 16/04/2019 10:30:25 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:30:25 - 
-Tue, 16/04/2019 10:30:25 - Genie Search API
-Tue, 16/04/2019 10:30:25 - 
-Tue, 16/04/2019 10:30:26 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 10:30:26 - With values: 300
-Tue, 16/04/2019 10:30:26 - Result = 44
-Tue, 16/04/2019 10:30:26 - 
-Tue, 16/04/2019 10:33:18 - Genie Search API
-Tue, 16/04/2019 10:33:18 - 
-Tue, 16/04/2019 10:33:18 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:33:18 - 
-Tue, 16/04/2019 10:33:18 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:33:18 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:33:18 - database-user = root
-Tue, 16/04/2019 10:33:18 - database-password = ***
-Tue, 16/04/2019 10:33:18 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:33:18 - 
-Tue, 16/04/2019 10:33:18 - Genie Search API
-Tue, 16/04/2019 10:33:18 - 
-Tue, 16/04/2019 10:33:56 - Genie Search API
-Tue, 16/04/2019 10:33:56 - 
-Tue, 16/04/2019 10:33:56 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:33:56 - 
-Tue, 16/04/2019 10:33:56 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:33:56 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:33:56 - database-user = root
-Tue, 16/04/2019 10:33:56 - database-password = ***
-Tue, 16/04/2019 10:33:56 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:33:56 - 
-Tue, 16/04/2019 10:33:56 - Genie Search API
-Tue, 16/04/2019 10:33:56 - 
-Tue, 16/04/2019 10:44:52 - Genie Search API
-Tue, 16/04/2019 10:44:52 - 
-Tue, 16/04/2019 10:44:52 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:44:52 - 
-Tue, 16/04/2019 10:44:52 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:44:52 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:44:52 - database-user = root
-Tue, 16/04/2019 10:44:52 - database-password = ***
-Tue, 16/04/2019 10:44:52 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:44:52 - 
-Tue, 16/04/2019 10:44:52 - Genie Search API
-Tue, 16/04/2019 10:44:52 - 
-Tue, 16/04/2019 10:51:37 - Genie Search API
-Tue, 16/04/2019 10:51:37 - 
-Tue, 16/04/2019 10:51:37 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:51:37 - 
-Tue, 16/04/2019 10:51:37 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:51:37 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:51:37 - database-user = root
-Tue, 16/04/2019 10:51:37 - database-password = ***
-Tue, 16/04/2019 10:51:37 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:51:37 - 
-Tue, 16/04/2019 10:51:37 - Genie Search API
-Tue, 16/04/2019 10:51:37 - 
-Tue, 16/04/2019 10:51:58 - Genie Search API
-Tue, 16/04/2019 10:51:58 - 
-Tue, 16/04/2019 10:51:58 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:51:58 - 
-Tue, 16/04/2019 10:51:58 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:51:58 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:51:58 - database-user = root
-Tue, 16/04/2019 10:51:58 - database-password = ***
-Tue, 16/04/2019 10:51:58 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:51:58 - 
-Tue, 16/04/2019 10:51:58 - Genie Search API
-Tue, 16/04/2019 10:51:58 - 
-Tue, 16/04/2019 10:52:09 - Genie Search API
-Tue, 16/04/2019 10:52:09 - 
-Tue, 16/04/2019 10:52:09 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:52:09 - 
-Tue, 16/04/2019 10:52:09 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:52:09 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:52:09 - database-user = root
-Tue, 16/04/2019 10:52:09 - database-password = ***
-Tue, 16/04/2019 10:52:09 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:52:09 - 
-Tue, 16/04/2019 10:52:09 - Genie Search API
-Tue, 16/04/2019 10:52:09 - 
-Tue, 16/04/2019 10:53:00 - Genie Search API
-Tue, 16/04/2019 10:53:00 - 
-Tue, 16/04/2019 10:53:00 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:53:00 - 
-Tue, 16/04/2019 10:53:00 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:53:00 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:53:00 - database-user = root
-Tue, 16/04/2019 10:53:00 - database-password = ***
-Tue, 16/04/2019 10:53:00 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:53:00 - 
-Tue, 16/04/2019 10:53:00 - Genie Search API
-Tue, 16/04/2019 10:53:00 - 
-Tue, 16/04/2019 10:53:51 - Genie Search API
-Tue, 16/04/2019 10:53:51 - 
-Tue, 16/04/2019 10:53:51 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:53:51 - 
-Tue, 16/04/2019 10:53:51 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:53:51 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:53:51 - database-user = root
-Tue, 16/04/2019 10:53:51 - database-password = ***
-Tue, 16/04/2019 10:53:51 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:53:51 - 
-Tue, 16/04/2019 10:53:51 - Genie Search API
-Tue, 16/04/2019 10:53:51 - 
-Tue, 16/04/2019 10:57:53 - Genie Search API
-Tue, 16/04/2019 10:57:53 - 
-Tue, 16/04/2019 10:57:53 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:57:53 - 
-Tue, 16/04/2019 10:57:53 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:57:53 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:57:53 - database-user = root
-Tue, 16/04/2019 10:57:53 - database-password = ***
-Tue, 16/04/2019 10:57:53 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:57:53 - 
-Tue, 16/04/2019 10:57:53 - Genie Search API
-Tue, 16/04/2019 10:57:53 - 
-Tue, 16/04/2019 10:58:17 - Genie Search API
-Tue, 16/04/2019 10:58:17 - 
-Tue, 16/04/2019 10:58:17 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:58:17 - 
-Tue, 16/04/2019 10:58:17 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:58:17 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:58:17 - database-user = root
-Tue, 16/04/2019 10:58:17 - database-password = ***
-Tue, 16/04/2019 10:58:17 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:58:17 - 
-Tue, 16/04/2019 10:58:17 - Genie Search API
-Tue, 16/04/2019 10:58:17 - 
-Tue, 16/04/2019 10:58:25 - Genie Search API
-Tue, 16/04/2019 10:58:25 - 
-Tue, 16/04/2019 10:58:25 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:58:25 - 
-Tue, 16/04/2019 10:58:25 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:58:25 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:58:25 - database-user = root
-Tue, 16/04/2019 10:58:25 - database-password = ***
-Tue, 16/04/2019 10:58:25 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:58:25 - 
-Tue, 16/04/2019 10:58:25 - Genie Search API
-Tue, 16/04/2019 10:58:25 - 
-Tue, 16/04/2019 10:58:28 - Genie Search API
-Tue, 16/04/2019 10:58:28 - 
-Tue, 16/04/2019 10:58:28 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 10:58:28 - 
-Tue, 16/04/2019 10:58:28 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 10:58:28 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 10:58:28 - database-user = root
-Tue, 16/04/2019 10:58:28 - database-password = ***
-Tue, 16/04/2019 10:58:28 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 10:58:28 - 
-Tue, 16/04/2019 10:58:28 - Genie Search API
-Tue, 16/04/2019 10:58:28 - 
-Tue, 16/04/2019 11:13:49 - Genie Search API
-Tue, 16/04/2019 11:13:49 - 
-Tue, 16/04/2019 11:13:49 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:13:49 - 
-Tue, 16/04/2019 11:13:49 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:13:49 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:13:49 - database-user = root
-Tue, 16/04/2019 11:13:49 - database-password = ***
-Tue, 16/04/2019 11:13:49 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:13:49 - 
-Tue, 16/04/2019 11:13:49 - Genie Search API
-Tue, 16/04/2019 11:13:49 - 
-Tue, 16/04/2019 11:14:08 - Genie Search API
-Tue, 16/04/2019 11:14:08 - 
-Tue, 16/04/2019 11:14:08 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:14:08 - 
-Tue, 16/04/2019 11:14:08 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:14:08 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:14:08 - database-user = root
-Tue, 16/04/2019 11:14:08 - database-password = ***
-Tue, 16/04/2019 11:14:08 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:14:08 - 
-Tue, 16/04/2019 11:14:08 - Genie Search API
-Tue, 16/04/2019 11:14:08 - 
-Tue, 16/04/2019 11:14:21 - Genie Search API
-Tue, 16/04/2019 11:14:21 - 
-Tue, 16/04/2019 11:14:21 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:14:21 - 
-Tue, 16/04/2019 11:14:21 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:14:21 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:14:21 - database-user = root
-Tue, 16/04/2019 11:14:21 - database-password = ***
-Tue, 16/04/2019 11:14:21 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:14:21 - 
-Tue, 16/04/2019 11:14:21 - Genie Search API
-Tue, 16/04/2019 11:14:21 - 
-Tue, 16/04/2019 11:14:24 - Genie Search API
-Tue, 16/04/2019 11:14:24 - 
-Tue, 16/04/2019 11:14:24 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:14:24 - 
-Tue, 16/04/2019 11:14:24 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:14:24 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:14:24 - database-user = root
-Tue, 16/04/2019 11:14:24 - database-password = ***
-Tue, 16/04/2019 11:14:24 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:14:24 - 
-Tue, 16/04/2019 11:14:24 - Genie Search API
-Tue, 16/04/2019 11:14:24 - 
-Tue, 16/04/2019 11:14:44 - Genie Search API
-Tue, 16/04/2019 11:14:44 - 
-Tue, 16/04/2019 11:14:44 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:14:44 - 
-Tue, 16/04/2019 11:14:44 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:14:44 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:14:44 - database-user = root
-Tue, 16/04/2019 11:14:44 - database-password = ***
-Tue, 16/04/2019 11:14:44 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:14:44 - 
-Tue, 16/04/2019 11:14:44 - Genie Search API
-Tue, 16/04/2019 11:14:44 - 
-Tue, 16/04/2019 11:15:21 - Genie Search API
-Tue, 16/04/2019 11:15:21 - 
-Tue, 16/04/2019 11:15:21 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:15:21 - 
-Tue, 16/04/2019 11:15:21 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:15:21 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:15:21 - database-user = root
-Tue, 16/04/2019 11:15:21 - database-password = ***
-Tue, 16/04/2019 11:15:21 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:15:21 - 
-Tue, 16/04/2019 11:15:21 - Genie Search API
-Tue, 16/04/2019 11:15:21 - 
-Tue, 16/04/2019 11:16:01 - Genie Search API
-Tue, 16/04/2019 11:16:01 - 
-Tue, 16/04/2019 11:16:01 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:16:01 - 
-Tue, 16/04/2019 11:16:01 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:16:01 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:16:01 - database-user = root
-Tue, 16/04/2019 11:16:01 - database-password = ***
-Tue, 16/04/2019 11:16:01 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:16:01 - 
-Tue, 16/04/2019 11:16:01 - Genie Search API
-Tue, 16/04/2019 11:16:01 - 
-Tue, 16/04/2019 11:16:09 - Genie Search API
-Tue, 16/04/2019 11:16:09 - 
-Tue, 16/04/2019 11:16:09 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:16:09 - 
-Tue, 16/04/2019 11:16:09 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:16:09 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:16:09 - database-user = root
-Tue, 16/04/2019 11:16:09 - database-password = ***
-Tue, 16/04/2019 11:16:09 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:16:09 - 
-Tue, 16/04/2019 11:16:09 - Genie Search API
-Tue, 16/04/2019 11:16:09 - 
-Tue, 16/04/2019 11:18:05 - Genie Search API
-Tue, 16/04/2019 11:18:05 - 
-Tue, 16/04/2019 11:18:05 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:18:05 - 
-Tue, 16/04/2019 11:18:05 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:18:05 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:18:05 - database-user = root
-Tue, 16/04/2019 11:18:05 - database-password = ***
-Tue, 16/04/2019 11:18:05 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:18:05 - 
-Tue, 16/04/2019 11:18:05 - Genie Search API
-Tue, 16/04/2019 11:18:05 - 
-Tue, 16/04/2019 11:23:46 - Genie Search API
-Tue, 16/04/2019 11:23:46 - 
-Tue, 16/04/2019 11:23:46 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:23:46 - 
-Tue, 16/04/2019 11:23:46 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:23:46 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:23:46 - database-user = root
-Tue, 16/04/2019 11:23:46 - database-password = ***
-Tue, 16/04/2019 11:23:46 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:23:46 - 
-Tue, 16/04/2019 11:23:46 - Genie Search API
-Tue, 16/04/2019 11:23:46 - 
-Tue, 16/04/2019 11:25:26 - Genie Search API
-Tue, 16/04/2019 11:25:26 - 
-Tue, 16/04/2019 11:25:26 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:25:26 - 
-Tue, 16/04/2019 11:25:26 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:25:26 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:25:26 - database-user = root
-Tue, 16/04/2019 11:25:26 - database-password = ***
-Tue, 16/04/2019 11:25:26 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:25:26 - 
-Tue, 16/04/2019 11:25:26 - Genie Search API
-Tue, 16/04/2019 11:25:26 - 
-Tue, 16/04/2019 11:26:45 - Genie Search API
-Tue, 16/04/2019 11:26:45 - 
-Tue, 16/04/2019 11:26:45 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:26:45 - 
-Tue, 16/04/2019 11:26:45 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:26:45 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:26:45 - database-user = root
-Tue, 16/04/2019 11:26:45 - database-password = ***
-Tue, 16/04/2019 11:26:45 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:26:45 - 
-Tue, 16/04/2019 11:26:45 - Genie Search API
-Tue, 16/04/2019 11:26:45 - 
-Tue, 16/04/2019 11:28:02 - Genie Search API
-Tue, 16/04/2019 11:28:02 - 
-Tue, 16/04/2019 11:28:02 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:28:02 - 
-Tue, 16/04/2019 11:28:02 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:28:02 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:28:02 - database-user = root
-Tue, 16/04/2019 11:28:02 - database-password = ***
-Tue, 16/04/2019 11:28:02 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:28:02 - 
-Tue, 16/04/2019 11:28:02 - Genie Search API
-Tue, 16/04/2019 11:28:02 - 
-Tue, 16/04/2019 11:28:33 - Genie Search API
-Tue, 16/04/2019 11:28:33 - 
-Tue, 16/04/2019 11:28:33 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:28:33 - 
-Tue, 16/04/2019 11:28:33 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:28:33 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:28:33 - database-user = root
-Tue, 16/04/2019 11:28:33 - database-password = ***
-Tue, 16/04/2019 11:28:33 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:28:33 - 
-Tue, 16/04/2019 11:28:33 - Genie Search API
-Tue, 16/04/2019 11:28:33 - 
-Tue, 16/04/2019 11:30:09 - Genie Search API
-Tue, 16/04/2019 11:30:09 - 
-Tue, 16/04/2019 11:30:09 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:30:09 - 
-Tue, 16/04/2019 11:30:09 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:30:09 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:30:09 - database-user = root
-Tue, 16/04/2019 11:30:09 - database-password = ***
-Tue, 16/04/2019 11:30:09 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:30:09 - 
-Tue, 16/04/2019 11:30:09 - Genie Search API
-Tue, 16/04/2019 11:30:09 - 
-Tue, 16/04/2019 11:30:28 - Genie Search API
-Tue, 16/04/2019 11:30:28 - 
-Tue, 16/04/2019 11:30:28 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:30:28 - 
-Tue, 16/04/2019 11:30:28 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:30:28 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:30:28 - database-user = root
-Tue, 16/04/2019 11:30:28 - database-password = ***
-Tue, 16/04/2019 11:30:28 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:30:28 - 
-Tue, 16/04/2019 11:30:28 - Genie Search API
-Tue, 16/04/2019 11:30:28 - 
-Tue, 16/04/2019 11:30:47 - Genie Search API
-Tue, 16/04/2019 11:30:47 - 
-Tue, 16/04/2019 11:30:47 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:30:47 - 
-Tue, 16/04/2019 11:30:47 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:30:47 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:30:47 - database-user = root
-Tue, 16/04/2019 11:30:47 - database-password = ***
-Tue, 16/04/2019 11:30:47 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:30:47 - 
-Tue, 16/04/2019 11:30:47 - Genie Search API
-Tue, 16/04/2019 11:30:47 - 
-Tue, 16/04/2019 11:32:54 - Genie Search API
-Tue, 16/04/2019 11:32:54 - 
-Tue, 16/04/2019 11:32:54 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:32:54 - 
-Tue, 16/04/2019 11:32:54 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:32:54 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:32:54 - database-user = root
-Tue, 16/04/2019 11:32:54 - database-password = ***
-Tue, 16/04/2019 11:32:54 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:32:54 - 
-Tue, 16/04/2019 11:32:54 - Genie Search API
-Tue, 16/04/2019 11:32:54 - 
-Tue, 16/04/2019 11:33:03 - Genie Search API
-Tue, 16/04/2019 11:33:03 - 
-Tue, 16/04/2019 11:33:03 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:33:03 - 
-Tue, 16/04/2019 11:33:03 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:33:03 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:33:03 - database-user = root
-Tue, 16/04/2019 11:33:03 - database-password = ***
-Tue, 16/04/2019 11:33:03 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:33:03 - 
-Tue, 16/04/2019 11:33:03 - Genie Search API
-Tue, 16/04/2019 11:33:03 - 
-Tue, 16/04/2019 11:44:27 - Genie Search API
-Tue, 16/04/2019 11:44:27 - 
-Tue, 16/04/2019 11:44:27 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:44:27 - 
-Tue, 16/04/2019 11:44:27 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:44:27 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:44:27 - database-user = root
-Tue, 16/04/2019 11:44:27 - database-password = ***
-Tue, 16/04/2019 11:44:27 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:44:27 - 
-Tue, 16/04/2019 11:44:27 - Genie Search API
-Tue, 16/04/2019 11:44:27 - 
-Tue, 16/04/2019 11:44:27 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 11:44:27 - With values: 300
-Tue, 16/04/2019 11:44:27 - Result = 44
-Tue, 16/04/2019 11:44:27 - 
-Tue, 16/04/2019 11:51:34 - Genie Search API
-Tue, 16/04/2019 11:51:34 - 
-Tue, 16/04/2019 11:51:34 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:51:34 - 
-Tue, 16/04/2019 11:51:34 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:51:34 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:51:34 - database-user = root
-Tue, 16/04/2019 11:51:34 - database-password = ***
-Tue, 16/04/2019 11:51:34 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:51:34 - 
-Tue, 16/04/2019 11:51:34 - Genie Search API
-Tue, 16/04/2019 11:51:34 - 
-Tue, 16/04/2019 11:51:34 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 11:51:34 - With values: 300
-Tue, 16/04/2019 11:51:34 - Result = 44
-Tue, 16/04/2019 11:51:34 - 
-Tue, 16/04/2019 11:51:49 - Genie Search API
-Tue, 16/04/2019 11:51:49 - 
-Tue, 16/04/2019 11:51:49 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 11:51:49 - 
-Tue, 16/04/2019 11:51:49 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 11:51:49 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 11:51:49 - database-user = root
-Tue, 16/04/2019 11:51:49 - database-password = ***
-Tue, 16/04/2019 11:51:49 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 11:51:49 - 
-Tue, 16/04/2019 11:51:49 - Genie Search API
-Tue, 16/04/2019 11:51:49 - 
-Tue, 16/04/2019 12:25:12 - Genie Search API
-Tue, 16/04/2019 12:25:12 - 
-Tue, 16/04/2019 12:25:12 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:25:12 - 
-Tue, 16/04/2019 12:25:12 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:25:12 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:25:12 - database-user = root
-Tue, 16/04/2019 12:25:12 - database-password = ***
-Tue, 16/04/2019 12:25:12 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:25:12 - 
-Tue, 16/04/2019 12:25:12 - Genie Search API
-Tue, 16/04/2019 12:25:12 - 
-Tue, 16/04/2019 12:25:46 - Genie Search API
-Tue, 16/04/2019 12:25:46 - 
-Tue, 16/04/2019 12:25:46 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:25:46 - 
-Tue, 16/04/2019 12:25:46 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:25:46 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:25:46 - database-user = root
-Tue, 16/04/2019 12:25:46 - database-password = ***
-Tue, 16/04/2019 12:25:46 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:25:46 - 
-Tue, 16/04/2019 12:25:46 - Genie Search API
-Tue, 16/04/2019 12:25:46 - 
-Tue, 16/04/2019 12:28:09 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 12:28:09 - With values: 300
-Tue, 16/04/2019 12:28:09 - Result = 44
-Tue, 16/04/2019 12:28:09 - 
-Tue, 16/04/2019 12:29:00 - Genie Search API
-Tue, 16/04/2019 12:29:00 - 
-Tue, 16/04/2019 12:29:00 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:29:00 - 
-Tue, 16/04/2019 12:29:00 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:29:00 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:29:00 - database-user = root
-Tue, 16/04/2019 12:29:00 - database-password = ***
-Tue, 16/04/2019 12:29:00 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:29:00 - 
-Tue, 16/04/2019 12:29:00 - Genie Search API
-Tue, 16/04/2019 12:29:00 - 
-Tue, 16/04/2019 12:29:01 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 12:29:01 - With values: 300
-Tue, 16/04/2019 12:29:01 - Result = 44
-Tue, 16/04/2019 12:29:01 - 
-Tue, 16/04/2019 12:29:18 - Genie Search API
-Tue, 16/04/2019 12:29:18 - 
-Tue, 16/04/2019 12:29:18 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:29:18 - 
-Tue, 16/04/2019 12:29:18 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:29:18 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:29:18 - database-user = root
-Tue, 16/04/2019 12:29:18 - database-password = ***
-Tue, 16/04/2019 12:29:18 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:29:18 - 
-Tue, 16/04/2019 12:29:18 - Genie Search API
-Tue, 16/04/2019 12:29:18 - 
-Tue, 16/04/2019 12:29:19 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 12:29:19 - With values: 300
-Tue, 16/04/2019 12:29:19 - Result = 44
-Tue, 16/04/2019 12:29:19 - 
-Tue, 16/04/2019 12:30:36 - Genie Search API
-Tue, 16/04/2019 12:30:36 - 
-Tue, 16/04/2019 12:30:36 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:30:36 - 
-Tue, 16/04/2019 12:30:36 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:30:36 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:30:36 - database-user = root
-Tue, 16/04/2019 12:30:36 - database-password = ***
-Tue, 16/04/2019 12:30:36 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:30:36 - 
-Tue, 16/04/2019 12:30:36 - Genie Search API
-Tue, 16/04/2019 12:30:36 - 
-Tue, 16/04/2019 12:30:36 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 12:30:36 - With values: 300
-Tue, 16/04/2019 12:30:36 - Result = 44
-Tue, 16/04/2019 12:30:36 - 
-Tue, 16/04/2019 12:30:58 - Genie Search API
-Tue, 16/04/2019 12:30:58 - 
-Tue, 16/04/2019 12:30:58 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:30:58 - 
-Tue, 16/04/2019 12:30:58 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:30:58 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:30:58 - database-user = root
-Tue, 16/04/2019 12:30:58 - database-password = ***
-Tue, 16/04/2019 12:30:58 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:30:58 - 
-Tue, 16/04/2019 12:30:58 - Genie Search API
-Tue, 16/04/2019 12:30:58 - 
-Tue, 16/04/2019 12:30:58 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 12:30:58 - With values: 300
-Tue, 16/04/2019 12:30:58 - Result = 44
-Tue, 16/04/2019 12:30:58 - 
-Tue, 16/04/2019 12:34:40 - Genie Search API
-Tue, 16/04/2019 12:34:40 - 
-Tue, 16/04/2019 12:34:40 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:34:40 - 
-Tue, 16/04/2019 12:34:40 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:34:40 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:34:40 - database-user = root
-Tue, 16/04/2019 12:34:40 - database-password = ***
-Tue, 16/04/2019 12:34:40 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:34:40 - 
-Tue, 16/04/2019 12:34:40 - Genie Search API
-Tue, 16/04/2019 12:34:40 - 
-Tue, 16/04/2019 12:34:40 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 12:34:40 - With values: 300
-Tue, 16/04/2019 12:34:40 - Result = 44
-Tue, 16/04/2019 12:34:40 - 
-Tue, 16/04/2019 12:35:56 - Genie Search API
-Tue, 16/04/2019 12:35:56 - 
-Tue, 16/04/2019 12:35:56 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:35:56 - 
-Tue, 16/04/2019 12:35:56 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:35:56 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:35:56 - database-user = root
-Tue, 16/04/2019 12:35:56 - database-password = ***
-Tue, 16/04/2019 12:35:56 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:35:56 - 
-Tue, 16/04/2019 12:35:56 - Genie Search API
-Tue, 16/04/2019 12:35:56 - 
-Tue, 16/04/2019 12:35:57 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 12:35:57 - With values: 300
-Tue, 16/04/2019 12:35:57 - Result = 44
-Tue, 16/04/2019 12:35:57 - 
-Tue, 16/04/2019 12:36:48 - Genie Search API
-Tue, 16/04/2019 12:36:48 - 
-Tue, 16/04/2019 12:36:48 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:36:48 - 
-Tue, 16/04/2019 12:36:48 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:36:48 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:36:48 - database-user = root
-Tue, 16/04/2019 12:36:48 - database-password = ***
-Tue, 16/04/2019 12:36:48 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:36:48 - 
-Tue, 16/04/2019 12:36:48 - Genie Search API
-Tue, 16/04/2019 12:36:48 - 
-Tue, 16/04/2019 12:37:22 - Genie Search API
-Tue, 16/04/2019 12:37:22 - 
-Tue, 16/04/2019 12:37:22 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:37:22 - 
-Tue, 16/04/2019 12:37:22 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:37:22 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:37:22 - database-user = root
-Tue, 16/04/2019 12:37:22 - database-password = ***
-Tue, 16/04/2019 12:37:22 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:37:22 - 
-Tue, 16/04/2019 12:37:22 - Genie Search API
-Tue, 16/04/2019 12:37:22 - 
-Tue, 16/04/2019 12:37:35 - Genie Search API
-Tue, 16/04/2019 12:37:35 - 
-Tue, 16/04/2019 12:37:35 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:37:35 - 
-Tue, 16/04/2019 12:37:35 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:37:35 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:37:35 - database-user = root
-Tue, 16/04/2019 12:37:35 - database-password = ***
-Tue, 16/04/2019 12:37:35 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:37:35 - 
-Tue, 16/04/2019 12:37:35 - Genie Search API
-Tue, 16/04/2019 12:37:35 - 
-Tue, 16/04/2019 12:37:53 - Genie Search API
-Tue, 16/04/2019 12:37:53 - 
-Tue, 16/04/2019 12:37:53 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:37:53 - 
-Tue, 16/04/2019 12:37:53 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:37:53 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:37:53 - database-user = root
-Tue, 16/04/2019 12:37:53 - database-password = ***
-Tue, 16/04/2019 12:37:53 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:37:53 - 
-Tue, 16/04/2019 12:37:53 - Genie Search API
-Tue, 16/04/2019 12:37:53 - 
-Tue, 16/04/2019 12:38:10 - Genie Search API
-Tue, 16/04/2019 12:38:10 - 
-Tue, 16/04/2019 12:38:10 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:38:10 - 
-Tue, 16/04/2019 12:38:10 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:38:10 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:38:10 - database-user = root
-Tue, 16/04/2019 12:38:10 - database-password = ***
-Tue, 16/04/2019 12:38:10 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:38:10 - 
-Tue, 16/04/2019 12:38:10 - Genie Search API
-Tue, 16/04/2019 12:38:10 - 
-Tue, 16/04/2019 12:38:53 - Genie Search API
-Tue, 16/04/2019 12:38:53 - 
-Tue, 16/04/2019 12:38:53 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:38:53 - 
-Tue, 16/04/2019 12:38:53 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:38:53 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:38:53 - database-user = root
-Tue, 16/04/2019 12:38:53 - database-password = ***
-Tue, 16/04/2019 12:38:53 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:38:53 - 
-Tue, 16/04/2019 12:38:53 - Genie Search API
-Tue, 16/04/2019 12:38:53 - 
-Tue, 16/04/2019 12:40:00 - Genie Search API
-Tue, 16/04/2019 12:40:00 - 
-Tue, 16/04/2019 12:40:00 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:40:00 - 
-Tue, 16/04/2019 12:40:00 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:40:00 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:40:00 - database-user = root
-Tue, 16/04/2019 12:40:00 - database-password = ***
-Tue, 16/04/2019 12:40:00 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:40:00 - 
-Tue, 16/04/2019 12:40:00 - Genie Search API
-Tue, 16/04/2019 12:40:00 - 
-Tue, 16/04/2019 12:41:56 - Genie Search API
-Tue, 16/04/2019 12:41:56 - 
-Tue, 16/04/2019 12:41:56 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:41:56 - 
-Tue, 16/04/2019 12:41:56 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:41:56 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:41:56 - database-user = root
-Tue, 16/04/2019 12:41:56 - database-password = ***
-Tue, 16/04/2019 12:41:56 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:41:56 - 
-Tue, 16/04/2019 12:41:56 - Genie Search API
-Tue, 16/04/2019 12:41:56 - 
-Tue, 16/04/2019 12:45:12 - Executing Method: public static long com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone(long,java.lang.String)
-Tue, 16/04/2019 12:45:12 - With values: 25
-Tue, 16/04/2019 12:45:12 - Result = 25
-Tue, 16/04/2019 12:45:12 - 
-Tue, 16/04/2019 12:45:42 - Genie Search API
-Tue, 16/04/2019 12:45:42 - 
-Tue, 16/04/2019 12:45:42 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 12:45:42 - 
-Tue, 16/04/2019 12:45:42 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 12:45:42 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 12:45:42 - database-user = root
-Tue, 16/04/2019 12:45:42 - database-password = ***
-Tue, 16/04/2019 12:45:42 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 12:45:42 - 
-Tue, 16/04/2019 12:45:42 - Genie Search API
-Tue, 16/04/2019 12:45:42 - 
-Tue, 16/04/2019 12:45:43 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 12:45:43 - With values: 300
-Tue, 16/04/2019 12:45:43 - Result = 44
-Tue, 16/04/2019 12:45:43 - 
-Tue, 16/04/2019 12:45:44 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 12:45:44 - With values: 4
-Tue, 16/04/2019 12:45:44 - Result = 4
-Tue, 16/04/2019 12:45:44 - 
-Tue, 16/04/2019 12:45:44 - Executing Method: public static long com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone(long,java.lang.String)
-Tue, 16/04/2019 12:45:44 - With values: 25
-Tue, 16/04/2019 12:45:44 - Result = 25
-Tue, 16/04/2019 12:45:44 - 
-Tue, 16/04/2019 13:37:19 - Genie Search API
-Tue, 16/04/2019 13:37:19 - 
-Tue, 16/04/2019 13:37:19 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
-Tue, 16/04/2019 13:37:19 - 
-Tue, 16/04/2019 13:37:19 - input-repo = D:\Sourcerer_portable\repositories\sf_110
-Tue, 16/04/2019 13:37:19 - database-url = jdbc:mysql://localhost:3306/sf_110
-Tue, 16/04/2019 13:37:19 - database-user = root
-Tue, 16/04/2019 13:37:19 - database-password = ***
-Tue, 16/04/2019 13:37:19 - webserver-url = http://localhost:8080
-Tue, 16/04/2019 13:37:19 - 
-Tue, 16/04/2019 13:37:19 - Genie Search API
-Tue, 16/04/2019 13:37:19 - 
-Tue, 16/04/2019 13:38:06 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 13:38:06 - With values: 300
-Tue, 16/04/2019 13:38:06 - Result = 44
-Tue, 16/04/2019 13:38:06 - 
-Tue, 16/04/2019 13:38:07 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
-Tue, 16/04/2019 13:38:07 - With values: 4
-Tue, 16/04/2019 13:38:07 - Result = 4
-Tue, 16/04/2019 13:38:07 - 
-Tue, 16/04/2019 13:38:48 - Executing Method: public static long com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone(long,java.lang.String)
-Tue, 16/04/2019 13:38:48 - With values: 25
-Tue, 16/04/2019 13:38:48 - Result = 25
-Tue, 16/04/2019 13:38:48 - 
+Wed, 17/04/2019 09:45:22 - Genie Search API
+Wed, 17/04/2019 09:45:22 - 
+Wed, 17/04/2019 09:45:22 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 09:45:22 - 
+Wed, 17/04/2019 09:45:22 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 09:45:22 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 09:45:22 - database-user = root
+Wed, 17/04/2019 09:45:22 - database-password = ***
+Wed, 17/04/2019 09:45:22 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 09:45:22 - 
+Wed, 17/04/2019 09:45:22 - Genie Search API
+Wed, 17/04/2019 09:45:22 - 
+Wed, 17/04/2019 09:45:24 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 09:45:24 - With values: 300
+Wed, 17/04/2019 09:45:24 - Result = 44
+Wed, 17/04/2019 09:45:24 - 
+Wed, 17/04/2019 09:48:44 - Genie Search API
+Wed, 17/04/2019 09:48:44 - 
+Wed, 17/04/2019 09:48:44 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 09:48:44 - 
+Wed, 17/04/2019 09:48:44 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 09:48:44 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 09:48:44 - database-user = root
+Wed, 17/04/2019 09:48:44 - database-password = ***
+Wed, 17/04/2019 09:48:44 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 09:48:44 - 
+Wed, 17/04/2019 09:48:44 - Genie Search API
+Wed, 17/04/2019 09:48:44 - 
+Wed, 17/04/2019 09:48:45 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 09:48:45 - With values: 300
+Wed, 17/04/2019 09:48:45 - Result = 44
+Wed, 17/04/2019 09:48:45 - 
+Wed, 17/04/2019 09:49:36 - Genie Search API
+Wed, 17/04/2019 09:49:36 - 
+Wed, 17/04/2019 09:49:36 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 09:49:36 - 
+Wed, 17/04/2019 09:49:36 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 09:49:36 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 09:49:36 - database-user = root
+Wed, 17/04/2019 09:49:36 - database-password = ***
+Wed, 17/04/2019 09:49:36 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 09:49:36 - 
+Wed, 17/04/2019 09:49:36 - Genie Search API
+Wed, 17/04/2019 09:49:36 - 
+Wed, 17/04/2019 09:50:16 - Genie Search API
+Wed, 17/04/2019 09:50:16 - 
+Wed, 17/04/2019 09:50:16 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 09:50:16 - 
+Wed, 17/04/2019 09:50:16 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 09:50:16 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 09:50:16 - database-user = root
+Wed, 17/04/2019 09:50:16 - database-password = ***
+Wed, 17/04/2019 09:50:16 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 09:50:16 - 
+Wed, 17/04/2019 09:50:16 - Genie Search API
+Wed, 17/04/2019 09:50:16 - 
+Wed, 17/04/2019 09:55:30 - Genie Search API
+Wed, 17/04/2019 09:55:30 - 
+Wed, 17/04/2019 09:55:30 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 09:55:30 - 
+Wed, 17/04/2019 09:55:30 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 09:55:30 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 09:55:30 - database-user = root
+Wed, 17/04/2019 09:55:30 - database-password = ***
+Wed, 17/04/2019 09:55:30 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 09:55:30 - 
+Wed, 17/04/2019 09:55:30 - Genie Search API
+Wed, 17/04/2019 09:55:30 - 
+Wed, 17/04/2019 09:55:33 - 
+Wed, 17/04/2019 09:55:33 - Entity_id: 12709553 Generating compiled jar...
+Wed, 17/04/2019 09:55:33 - 
+Wed, 17/04/2019 09:55:33 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 09:55:33 - 
+Wed, 17/04/2019 09:55:33 - Entity_id: 12709553 Extracting sliced zip file...
+Wed, 17/04/2019 09:55:33 - 
+Wed, 17/04/2019 09:55:33 - Entity_id: 12709553 Generating Build.xml...
+Wed, 17/04/2019 09:56:09 - Genie Search API
+Wed, 17/04/2019 09:56:09 - 
+Wed, 17/04/2019 09:56:09 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 09:56:09 - 
+Wed, 17/04/2019 09:56:09 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 09:56:09 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 09:56:09 - database-user = root
+Wed, 17/04/2019 09:56:09 - database-password = ***
+Wed, 17/04/2019 09:56:09 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 09:56:09 - 
+Wed, 17/04/2019 09:56:09 - Genie Search API
+Wed, 17/04/2019 09:56:09 - 
+Wed, 17/04/2019 09:56:11 - 
+Wed, 17/04/2019 09:56:11 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 09:56:11 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 09:56:11 - With values: 300
+Wed, 17/04/2019 09:56:11 - Result = 44
+Wed, 17/04/2019 09:56:11 - 
+Wed, 17/04/2019 09:56:11 - 
+Wed, 17/04/2019 09:56:11 - Entity_id: 536227 Slicing...
+Wed, 17/04/2019 09:56:11 - 
+Wed, 17/04/2019 09:56:11 - Entity_id: 536516 Slicing...
+Wed, 17/04/2019 09:56:12 - 
+Wed, 17/04/2019 09:56:12 - Entity_id: 12709553 Generating compiled jar...
+Wed, 17/04/2019 09:56:12 - 
+Wed, 17/04/2019 09:56:12 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 09:56:12 - 
+Wed, 17/04/2019 09:56:12 - Entity_id: 12709553 Extracting sliced zip file...
+Wed, 17/04/2019 09:56:12 - 
+Wed, 17/04/2019 09:56:12 - Entity_id: 12709553 Generating Build.xml...
+Wed, 17/04/2019 09:56:12 - 
+Wed, 17/04/2019 09:56:12 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 09:56:12 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 09:56:12 - With values: 4
+Wed, 17/04/2019 09:56:12 - Result = 4
+Wed, 17/04/2019 09:56:12 - 
+Wed, 17/04/2019 09:56:12 - 
+Wed, 17/04/2019 09:56:12 - Entity_id: 12955908 Executing method...
+Wed, 17/04/2019 09:56:12 - Executing Method: public static long com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone(long,java.lang.String)
+Wed, 17/04/2019 09:56:12 - With values: 25
+Wed, 17/04/2019 09:56:12 - Result = 25
+Wed, 17/04/2019 09:56:12 - 
+Wed, 17/04/2019 09:57:17 - Genie Search API
+Wed, 17/04/2019 09:57:17 - 
+Wed, 17/04/2019 09:57:17 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 09:57:17 - 
+Wed, 17/04/2019 09:57:17 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 09:57:17 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 09:57:17 - database-user = root
+Wed, 17/04/2019 09:57:17 - database-password = ***
+Wed, 17/04/2019 09:57:17 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 09:57:17 - 
+Wed, 17/04/2019 09:57:17 - Genie Search API
+Wed, 17/04/2019 09:57:17 - 
+Wed, 17/04/2019 09:57:18 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 09:57:18 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 09:57:18 - With values: 300
+Wed, 17/04/2019 09:57:18 - Result = 44
+Wed, 17/04/2019 09:57:18 - 
+Wed, 17/04/2019 09:57:18 - Entity_id: 536227 Slicing...
+Wed, 17/04/2019 09:57:18 - Entity_id: 536516 Slicing...
+Wed, 17/04/2019 09:57:18 - Entity_id: 12709553 Generating compiled jar...
+Wed, 17/04/2019 09:57:18 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 09:57:53 - Entity_id: 12709553 Extracting sliced zip file...
+Wed, 17/04/2019 09:57:53 - Entity_id: 12709553 Generating Build.xml...
+Wed, 17/04/2019 09:57:56 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 09:57:56 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 09:57:56 - With values: 4
+Wed, 17/04/2019 09:57:56 - Result = 4
+Wed, 17/04/2019 09:57:56 - 
+Wed, 17/04/2019 09:57:56 - Entity_id: 12955908 Executing method...
+Wed, 17/04/2019 09:57:56 - Executing Method: public static long com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone(long,java.lang.String)
+Wed, 17/04/2019 09:57:56 - With values: 25
+Wed, 17/04/2019 09:57:56 - Result = 25
+Wed, 17/04/2019 09:57:56 - 
+Wed, 17/04/2019 09:58:06 - Genie Search API
+Wed, 17/04/2019 09:58:06 - 
+Wed, 17/04/2019 09:58:06 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 09:58:06 - 
+Wed, 17/04/2019 09:58:06 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 09:58:06 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 09:58:06 - database-user = root
+Wed, 17/04/2019 09:58:06 - database-password = ***
+Wed, 17/04/2019 09:58:06 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 09:58:06 - 
+Wed, 17/04/2019 09:58:06 - Genie Search API
+Wed, 17/04/2019 09:58:06 - 
+Wed, 17/04/2019 09:58:07 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 09:58:07 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 09:58:07 - With values: 4
+Wed, 17/04/2019 09:58:07 - Result = 4
+Wed, 17/04/2019 09:58:07 - 
+Wed, 17/04/2019 09:58:52 - Genie Search API
+Wed, 17/04/2019 09:58:52 - 
+Wed, 17/04/2019 09:58:52 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 09:58:52 - 
+Wed, 17/04/2019 09:58:52 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 09:58:52 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 09:58:52 - database-user = root
+Wed, 17/04/2019 09:58:52 - database-password = ***
+Wed, 17/04/2019 09:58:52 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 09:58:52 - 
+Wed, 17/04/2019 09:58:52 - Genie Search API
+Wed, 17/04/2019 09:58:52 - 
+Wed, 17/04/2019 09:59:06 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 09:59:06 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 09:59:06 - With values: 4
+Wed, 17/04/2019 09:59:06 - Result = 4
+Wed, 17/04/2019 09:59:06 - 
+Wed, 17/04/2019 10:01:14 - Genie Search API
+Wed, 17/04/2019 10:01:14 - 
+Wed, 17/04/2019 10:01:14 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 10:01:14 - 
+Wed, 17/04/2019 10:01:14 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 10:01:14 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 10:01:14 - database-user = root
+Wed, 17/04/2019 10:01:14 - database-password = ***
+Wed, 17/04/2019 10:01:14 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 10:01:14 - 
+Wed, 17/04/2019 10:01:14 - Genie Search API
+Wed, 17/04/2019 10:01:14 - 
+Wed, 17/04/2019 10:01:21 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 10:06:35 - Genie Search API
+Wed, 17/04/2019 10:06:35 - 
+Wed, 17/04/2019 10:06:35 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 10:06:35 - 
+Wed, 17/04/2019 10:06:35 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 10:06:35 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 10:06:35 - database-user = root
+Wed, 17/04/2019 10:06:35 - database-password = ***
+Wed, 17/04/2019 10:06:35 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 10:06:35 - 
+Wed, 17/04/2019 10:06:35 - Genie Search API
+Wed, 17/04/2019 10:06:35 - 
+Wed, 17/04/2019 10:06:36 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 10:06:36 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 10:06:36 - With values: 300
+Wed, 17/04/2019 10:06:36 - Result = 44
+Wed, 17/04/2019 10:06:36 - 
+Wed, 17/04/2019 10:06:36 - Entity_id: 536227 Slicing...
+Wed, 17/04/2019 10:06:36 - Entity_id: 536516 Slicing...
+Wed, 17/04/2019 10:06:36 - Entity_id: 12709553 Generating compiled jar...
+Wed, 17/04/2019 10:06:36 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 10:07:15 - Entity_id: 12709553 Extracting sliced zip file...
+Wed, 17/04/2019 10:07:15 - Entity_id: 12709553 Generating Build.xml...
+Wed, 17/04/2019 10:07:19 - Entity_id: 12955908 Executing method...
+Wed, 17/04/2019 10:07:19 - Executing Method: public static long com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone(long,java.lang.String)
+Wed, 17/04/2019 10:07:19 - With values: 25
+Wed, 17/04/2019 10:07:19 - Result = 25
+Wed, 17/04/2019 10:07:19 - 
+Wed, 17/04/2019 10:08:09 - Genie Search API
+Wed, 17/04/2019 10:08:09 - 
+Wed, 17/04/2019 10:08:09 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 10:08:09 - 
+Wed, 17/04/2019 10:08:09 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 10:08:09 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 10:08:09 - database-user = root
+Wed, 17/04/2019 10:08:09 - database-password = ***
+Wed, 17/04/2019 10:08:09 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 10:08:09 - 
+Wed, 17/04/2019 10:08:09 - Genie Search API
+Wed, 17/04/2019 10:08:09 - 
+Wed, 17/04/2019 10:10:45 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 10:10:51 - Entity_id: 12709553 Generating compiled jar...
+Wed, 17/04/2019 10:10:51 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 10:11:40 - Entity_id: 12709553 Extracting sliced zip file...
+Wed, 17/04/2019 10:11:40 - Entity_id: 12709553 Generating Build.xml...
+Wed, 17/04/2019 10:13:02 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 10:13:02 - With values: 4
+Wed, 17/04/2019 10:13:02 - Result = 4
+Wed, 17/04/2019 10:13:02 - 
+Wed, 17/04/2019 10:13:44 - Genie Search API
+Wed, 17/04/2019 10:13:44 - 
+Wed, 17/04/2019 10:13:44 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 10:13:44 - 
+Wed, 17/04/2019 10:13:44 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 10:13:44 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 10:13:44 - database-user = root
+Wed, 17/04/2019 10:13:44 - database-password = ***
+Wed, 17/04/2019 10:13:44 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 10:13:44 - 
+Wed, 17/04/2019 10:13:44 - Genie Search API
+Wed, 17/04/2019 10:13:44 - 
+Wed, 17/04/2019 10:14:00 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\jar\12709553.jar
+Wed, 17/04/2019 10:14:08 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 10:14:08 - Entity_id: 12709553 Generating compiled jar...
+Wed, 17/04/2019 10:14:08 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 10:14:57 - Entity_id: 12709553 Extracting sliced zip file...
+Wed, 17/04/2019 10:14:57 - Entity_id: 12709553 Generating Build.xml...
+Wed, 17/04/2019 10:15:03 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 10:15:03 - With values: 4
+Wed, 17/04/2019 10:15:03 - Result = 4
+Wed, 17/04/2019 10:15:03 - 
+Wed, 17/04/2019 10:15:22 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\slice\12709553.zip
+Wed, 17/04/2019 10:15:46 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\extract-temp\12709553
+Wed, 17/04/2019 10:16:02 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\jar\12709553.jar
+Wed, 17/04/2019 10:18:42 - Genie Search API
+Wed, 17/04/2019 10:18:42 - 
+Wed, 17/04/2019 10:18:42 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 10:18:42 - 
+Wed, 17/04/2019 10:18:42 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 10:18:42 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 10:18:42 - database-user = root
+Wed, 17/04/2019 10:18:42 - database-password = ***
+Wed, 17/04/2019 10:18:42 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 10:18:42 - 
+Wed, 17/04/2019 10:18:42 - Genie Search API
+Wed, 17/04/2019 10:18:42 - 
+Wed, 17/04/2019 10:18:50 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\jar\12709553.jar
+Wed, 17/04/2019 10:18:50 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 10:18:50 - Entity_id: 12709553 Generating compiled jar...
+Wed, 17/04/2019 10:18:50 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 10:19:27 - Entity_id: 12709553 Extracting sliced zip file...
+Wed, 17/04/2019 10:19:27 - Entity_id: 12709553 Generating Build.xml...
+Wed, 17/04/2019 10:20:55 - Genie Search API
+Wed, 17/04/2019 10:20:55 - 
+Wed, 17/04/2019 10:20:55 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 10:20:55 - 
+Wed, 17/04/2019 10:20:55 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 10:20:55 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 10:20:55 - database-user = root
+Wed, 17/04/2019 10:20:55 - database-password = ***
+Wed, 17/04/2019 10:20:55 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 10:20:55 - 
+Wed, 17/04/2019 10:20:55 - Genie Search API
+Wed, 17/04/2019 10:20:55 - 
+Wed, 17/04/2019 10:20:59 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\slice\12709553.zip
+Wed, 17/04/2019 10:20:59 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\extract-temp\12709553
+Wed, 17/04/2019 10:20:59 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\jar\12709553.jar
+Wed, 17/04/2019 10:20:59 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 10:20:59 - Entity_id: 12709553 Generating compiled jar...
+Wed, 17/04/2019 10:20:59 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 10:21:35 - Entity_id: 12709553 Extracting sliced zip file...
+Wed, 17/04/2019 10:21:35 - Entity_id: 12709553 Generating Build.xml...
+Wed, 17/04/2019 10:21:50 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 10:21:50 - With values: 4
+Wed, 17/04/2019 10:21:50 - Result = 4
+Wed, 17/04/2019 10:21:50 - 
+Wed, 17/04/2019 10:21:58 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\slice\12709553.zip
+Wed, 17/04/2019 10:21:58 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\extract-temp\12709553
+Wed, 17/04/2019 10:21:58 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\jar\12709553.jar
+Wed, 17/04/2019 10:22:02 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 10:22:37 - Entity_id: 12709553 Generating compiled jar...
+Wed, 17/04/2019 10:22:37 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 10:22:37 - Entity_id: 12709553 Extracting sliced zip file...
+Wed, 17/04/2019 10:22:37 - Entity_id: 12709553 Generating Build.xml...
+Wed, 17/04/2019 10:23:50 - Genie Search API
+Wed, 17/04/2019 10:23:50 - 
+Wed, 17/04/2019 10:23:50 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Wed, 17/04/2019 10:23:50 - 
+Wed, 17/04/2019 10:23:50 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Wed, 17/04/2019 10:23:50 - database-url = jdbc:mysql://localhost:3306/sf_110
+Wed, 17/04/2019 10:23:50 - database-user = root
+Wed, 17/04/2019 10:23:50 - database-password = ***
+Wed, 17/04/2019 10:23:50 - webserver-url = http://localhost:8080
+Wed, 17/04/2019 10:23:50 - 
+Wed, 17/04/2019 10:23:50 - Genie Search API
+Wed, 17/04/2019 10:23:50 - 
+Wed, 17/04/2019 10:23:52 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 10:23:52 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 10:23:52 - With values: 300
+Wed, 17/04/2019 10:23:52 - Result = 44
+Wed, 17/04/2019 10:23:52 - 
+Wed, 17/04/2019 10:23:52 - Entity_id: 536227 Slicing...
+Wed, 17/04/2019 10:23:52 - Entity_id: 536516 Slicing...
+Wed, 17/04/2019 10:23:52 - Entity_id: 12709553 Generating compiled jar...
+Wed, 17/04/2019 10:23:52 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 10:23:52 - Entity_id: 12709553 Extracting sliced zip file...
+Wed, 17/04/2019 10:23:52 - Entity_id: 12709553 Generating Build.xml...
+Wed, 17/04/2019 10:23:53 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\slice\12709553.zip
+Wed, 17/04/2019 10:23:53 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\extract-temp\12709553
+Wed, 17/04/2019 10:23:53 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\jar\12709553.jar
+Wed, 17/04/2019 10:23:53 - Entity_id: 12709553 Executing method...
+Wed, 17/04/2019 10:23:53 - Entity_id: 12709553 Generating compiled jar...
+Wed, 17/04/2019 10:23:53 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 10:24:26 - Entity_id: 12709553 Extracting sliced zip file...
+Wed, 17/04/2019 10:24:26 - Entity_id: 12709553 Generating Build.xml...
+Wed, 17/04/2019 10:24:30 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Wed, 17/04/2019 10:24:30 - With values: 4
+Wed, 17/04/2019 10:24:30 - Result = 4
+Wed, 17/04/2019 10:24:30 - 
+Wed, 17/04/2019 10:24:30 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\slice\12709553.zip
+Wed, 17/04/2019 10:24:30 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\extract-temp\12709553
+Wed, 17/04/2019 10:24:30 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\jar\12709553.jar
+Wed, 17/04/2019 10:24:30 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 10:25:01 - Entity_id: 12709553 Generating compiled jar...
+Wed, 17/04/2019 10:25:01 - Entity_id: 12709553 Slicing...
+Wed, 17/04/2019 10:25:01 - Entity_id: 12709553 Extracting sliced zip file...
+Wed, 17/04/2019 10:25:01 - Entity_id: 12709553 Generating Build.xml...
+Wed, 17/04/2019 10:25:02 - Entity_id: 12955908 Executing method...
+Wed, 17/04/2019 10:25:02 - Executing Method: public static long com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone(long,java.lang.String)
+Wed, 17/04/2019 10:25:02 - With values: 25
+Wed, 17/04/2019 10:25:02 - Result = 25
+Wed, 17/04/2019 10:25:02 - 

@@ -173,32 +173,36 @@ public class GenieMethodTest {
 		GenieMethod genieMethod = genieMethodRepository.findByEntityId(entityId);
 		assertTrue(genieMethod.isAllowsExecution());
 
+		// Without files
+		boolean cleaned = genieMethod.clearMethodFiles();
+		assertTrue(cleaned);
+		assertFalse(genieMethod.isContainsSlicedFile());
+		assertFalse(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile().isDirectory());
+		assertFalse(genieMethod.isContainsCompiledJar());
+
 		// With files
 		genieMethod.execute("4");
 		assertTrue(genieMethod.isContainsSlicedFile());
-		assertTrue(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile()
-				.isDirectory());
+		assertTrue(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile().isDirectory());
 		assertTrue(genieMethod.isContainsCompiledJar());
 
 		// Without files
-		genieMethod.clearMethodFiles();
+		cleaned = genieMethod.clearMethodFiles();
+		assertTrue(cleaned);
 		assertFalse(genieMethod.isContainsSlicedFile());
-		assertFalse(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile()
-				.isDirectory());
+		assertFalse(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile().isDirectory());
 		assertFalse(genieMethod.isContainsCompiledJar());
 
 		// Slice
 		genieMethod.slice();
 		assertTrue(genieMethod.isContainsSlicedFile());
-		assertFalse(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile()
-				.isDirectory());
+		assertFalse(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile().isDirectory());
 		assertFalse(genieMethod.isContainsCompiledJar());
 
-		// Slice
+		// Compiled jar
 		genieMethod.generateJar();
 		assertTrue(genieMethod.isContainsSlicedFile());
-		assertTrue(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile()
-				.isDirectory());
+		assertTrue(Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", genieMethod.getEntityId() + "").toFile().isDirectory());
 		assertTrue(genieMethod.isContainsCompiledJar());
 	}
 

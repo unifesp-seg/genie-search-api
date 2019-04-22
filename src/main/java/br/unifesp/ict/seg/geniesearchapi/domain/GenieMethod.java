@@ -29,6 +29,7 @@ import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.ManipulateFile;
 import br.unifesp.ict.seg.geniesearchapi.services.compilemethod.infrastructure.ThreadExecObject;
 import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure.JavaTermExtractor;
 import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure.QueryTerm;
+import edu.uci.ics.sourcerer.services.file.adapter.FileAdapter;
 import edu.uci.ics.sourcerer.services.slicer.SlicerFactory;
 import edu.uci.ics.sourcerer.services.slicer.internal.SliceImpl;
 import edu.uci.ics.sourcerer.services.slicer.internal.SlicerDebug;
@@ -241,7 +242,9 @@ public class GenieMethod {
 	// SOURCERER SOURCE CODE
 	//
 	public String getSourceCode() {
-		return "";
+		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Getting source code...");
+        byte[] result = FileAdapter.lookupByEntityID(this.entityId.intValue());
+		return new String(result);
 	}
 	
 	//

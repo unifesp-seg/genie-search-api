@@ -1,0 +1,417 @@
+Mon, 22/04/2019 10:23:50 - Genie Search API
+Mon, 22/04/2019 10:23:50 - 
+Mon, 22/04/2019 10:23:50 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:23:50 - 
+Mon, 22/04/2019 10:23:50 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:23:50 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:23:50 - database-user = root
+Mon, 22/04/2019 10:23:50 - database-password = ***
+Mon, 22/04/2019 10:23:50 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:23:50 - 
+Mon, 22/04/2019 10:23:50 - Genie Search API
+Mon, 22/04/2019 10:23:50 - 
+Mon, 22/04/2019 10:23:56 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:24:50 - Entity_id: 12709553 Executing method...
+Mon, 22/04/2019 10:24:50 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Mon, 22/04/2019 10:24:50 - With values: 300
+Mon, 22/04/2019 10:24:50 - Result = 44
+Mon, 22/04/2019 10:24:50 - 
+Mon, 22/04/2019 10:24:50 - Entity_id: 12955908 Executing method...
+Mon, 22/04/2019 10:24:50 - Executing Method: public static long com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone(long,java.lang.String)
+Mon, 22/04/2019 10:24:50 - With values: 25
+Mon, 22/04/2019 10:24:50 - Result = 25
+Mon, 22/04/2019 10:24:50 - 
+Mon, 22/04/2019 10:24:50 - Entity_id: 12955908 Executing method...
+Mon, 22/04/2019 10:24:50 - Entity_id: 536227 Slicing...
+Mon, 22/04/2019 10:24:50 - Entity_id: 536516 Slicing...
+Mon, 22/04/2019 10:24:50 - Entity_id: 12709553 Generating compiled jar...
+Mon, 22/04/2019 10:24:50 - Entity_id: 12709553 Slicing...
+Mon, 22/04/2019 10:24:50 - Entity_id: 12709553 Extracting sliced zip file...
+Mon, 22/04/2019 10:24:50 - Entity_id: 12709553 Generating Build.xml...
+Mon, 22/04/2019 10:24:51 - Entity_id: 12955908 Executing method...
+Mon, 22/04/2019 10:24:51 - Executing Method: public static long com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone(long,java.lang.String)
+Mon, 22/04/2019 10:24:51 - With values: 25
+Mon, 22/04/2019 10:24:51 - Result = 25
+Mon, 22/04/2019 10:24:51 - 
+Mon, 22/04/2019 10:28:48 - Genie Search API
+Mon, 22/04/2019 10:28:48 - 
+Mon, 22/04/2019 10:28:48 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:28:48 - 
+Mon, 22/04/2019 10:28:48 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:28:48 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:28:48 - database-user = root
+Mon, 22/04/2019 10:28:48 - database-password = ***
+Mon, 22/04/2019 10:28:48 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:28:48 - 
+Mon, 22/04/2019 10:28:48 - Genie Search API
+Mon, 22/04/2019 10:28:48 - 
+Mon, 22/04/2019 10:28:49 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:29:37 - Genie Search API
+Mon, 22/04/2019 10:29:37 - 
+Mon, 22/04/2019 10:29:37 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:29:37 - 
+Mon, 22/04/2019 10:29:37 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:29:37 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:29:37 - database-user = root
+Mon, 22/04/2019 10:29:37 - database-password = ***
+Mon, 22/04/2019 10:29:37 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:29:37 - 
+Mon, 22/04/2019 10:29:37 - Genie Search API
+Mon, 22/04/2019 10:29:37 - 
+Mon, 22/04/2019 10:29:44 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:30:24 - Genie Search API
+Mon, 22/04/2019 10:30:24 - 
+Mon, 22/04/2019 10:30:24 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:30:24 - 
+Mon, 22/04/2019 10:30:24 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:30:24 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:30:24 - database-user = root
+Mon, 22/04/2019 10:30:24 - database-password = ***
+Mon, 22/04/2019 10:30:24 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:30:24 - 
+Mon, 22/04/2019 10:30:24 - Genie Search API
+Mon, 22/04/2019 10:30:24 - 
+Mon, 22/04/2019 10:30:24 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:31:58 - Genie Search API
+Mon, 22/04/2019 10:31:58 - 
+Mon, 22/04/2019 10:31:58 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:31:58 - 
+Mon, 22/04/2019 10:31:58 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:31:58 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:31:58 - database-user = root
+Mon, 22/04/2019 10:31:58 - database-password = ***
+Mon, 22/04/2019 10:31:58 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:31:58 - 
+Mon, 22/04/2019 10:31:58 - Genie Search API
+Mon, 22/04/2019 10:31:58 - 
+Mon, 22/04/2019 10:31:58 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:34:16 - Genie Search API
+Mon, 22/04/2019 10:34:16 - 
+Mon, 22/04/2019 10:34:16 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:34:16 - 
+Mon, 22/04/2019 10:34:16 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:34:16 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:34:16 - database-user = root
+Mon, 22/04/2019 10:34:16 - database-password = ***
+Mon, 22/04/2019 10:34:16 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:34:16 - 
+Mon, 22/04/2019 10:34:16 - Genie Search API
+Mon, 22/04/2019 10:34:16 - 
+Mon, 22/04/2019 10:34:17 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:34:48 - Genie Search API
+Mon, 22/04/2019 10:34:48 - 
+Mon, 22/04/2019 10:34:48 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:34:48 - 
+Mon, 22/04/2019 10:34:48 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:34:48 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:34:48 - database-user = root
+Mon, 22/04/2019 10:34:48 - database-password = ***
+Mon, 22/04/2019 10:34:48 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:34:48 - 
+Mon, 22/04/2019 10:34:48 - Genie Search API
+Mon, 22/04/2019 10:34:48 - 
+Mon, 22/04/2019 10:34:48 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:34:57 - Genie Search API
+Mon, 22/04/2019 10:34:57 - 
+Mon, 22/04/2019 10:34:57 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:34:57 - 
+Mon, 22/04/2019 10:34:57 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:34:57 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:34:57 - database-user = root
+Mon, 22/04/2019 10:34:57 - database-password = ***
+Mon, 22/04/2019 10:34:57 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:34:57 - 
+Mon, 22/04/2019 10:34:57 - Genie Search API
+Mon, 22/04/2019 10:34:57 - 
+Mon, 22/04/2019 10:34:58 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:37:22 - Genie Search API
+Mon, 22/04/2019 10:37:22 - 
+Mon, 22/04/2019 10:37:22 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:37:22 - 
+Mon, 22/04/2019 10:37:22 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:37:22 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:37:22 - database-user = root
+Mon, 22/04/2019 10:37:22 - database-password = ***
+Mon, 22/04/2019 10:37:22 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:37:22 - 
+Mon, 22/04/2019 10:37:22 - Genie Search API
+Mon, 22/04/2019 10:37:22 - 
+Mon, 22/04/2019 10:37:22 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:38:13 - Genie Search API
+Mon, 22/04/2019 10:38:13 - 
+Mon, 22/04/2019 10:38:13 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:38:13 - 
+Mon, 22/04/2019 10:38:13 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:38:13 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:38:13 - database-user = root
+Mon, 22/04/2019 10:38:13 - database-password = ***
+Mon, 22/04/2019 10:38:13 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:38:13 - 
+Mon, 22/04/2019 10:38:13 - Genie Search API
+Mon, 22/04/2019 10:38:13 - 
+Mon, 22/04/2019 10:38:13 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:39:35 - Genie Search API
+Mon, 22/04/2019 10:39:35 - 
+Mon, 22/04/2019 10:39:35 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:39:35 - 
+Mon, 22/04/2019 10:39:35 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:39:35 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:39:35 - database-user = root
+Mon, 22/04/2019 10:39:35 - database-password = ***
+Mon, 22/04/2019 10:39:35 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:39:35 - 
+Mon, 22/04/2019 10:39:35 - Genie Search API
+Mon, 22/04/2019 10:39:35 - 
+Mon, 22/04/2019 10:39:36 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:40:04 - Genie Search API
+Mon, 22/04/2019 10:40:04 - 
+Mon, 22/04/2019 10:40:04 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:40:04 - 
+Mon, 22/04/2019 10:40:04 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:40:04 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:40:04 - database-user = root
+Mon, 22/04/2019 10:40:04 - database-password = ***
+Mon, 22/04/2019 10:40:04 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:40:04 - 
+Mon, 22/04/2019 10:40:04 - Genie Search API
+Mon, 22/04/2019 10:40:04 - 
+Mon, 22/04/2019 10:40:04 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:40:48 - Genie Search API
+Mon, 22/04/2019 10:40:48 - 
+Mon, 22/04/2019 10:40:48 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:40:48 - 
+Mon, 22/04/2019 10:40:48 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:40:48 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:40:48 - database-user = root
+Mon, 22/04/2019 10:40:48 - database-password = ***
+Mon, 22/04/2019 10:40:48 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:40:48 - 
+Mon, 22/04/2019 10:40:48 - Genie Search API
+Mon, 22/04/2019 10:40:48 - 
+Mon, 22/04/2019 10:40:48 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:41:59 - Genie Search API
+Mon, 22/04/2019 10:41:59 - 
+Mon, 22/04/2019 10:41:59 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:41:59 - 
+Mon, 22/04/2019 10:41:59 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:41:59 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:41:59 - database-user = root
+Mon, 22/04/2019 10:41:59 - database-password = ***
+Mon, 22/04/2019 10:41:59 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:41:59 - 
+Mon, 22/04/2019 10:41:59 - Genie Search API
+Mon, 22/04/2019 10:41:59 - 
+Mon, 22/04/2019 10:42:00 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\slice\12709553.zip
+Mon, 22/04/2019 10:42:00 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\extract-temp\12709553
+Mon, 22/04/2019 10:42:00 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\jar\12709553.jar
+Mon, 22/04/2019 10:42:00 - Entity_id: 12709553 Executing method...
+Mon, 22/04/2019 10:42:00 - Entity_id: 12709553 Generating compiled jar...
+Mon, 22/04/2019 10:42:00 - Entity_id: 12709553 Slicing...
+Mon, 22/04/2019 10:42:42 - Entity_id: 12709553 Extracting sliced zip file...
+Mon, 22/04/2019 10:42:42 - Entity_id: 12709553 Generating Build.xml...
+Mon, 22/04/2019 10:42:46 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Mon, 22/04/2019 10:42:46 - With values: 4
+Mon, 22/04/2019 10:42:46 - Result = 4
+Mon, 22/04/2019 10:42:46 - 
+Mon, 22/04/2019 10:42:46 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\slice\12709553.zip
+Mon, 22/04/2019 10:42:46 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\extract-temp\12709553
+Mon, 22/04/2019 10:42:46 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\jar\12709553.jar
+Mon, 22/04/2019 10:42:46 - Entity_id: 12709553 Slicing...
+Mon, 22/04/2019 10:43:17 - Entity_id: 12709553 Generating compiled jar...
+Mon, 22/04/2019 10:43:17 - Entity_id: 12709553 Slicing...
+Mon, 22/04/2019 10:43:17 - Entity_id: 12709553 Extracting sliced zip file...
+Mon, 22/04/2019 10:43:17 - Entity_id: 12709553 Generating Build.xml...
+Mon, 22/04/2019 10:43:21 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 10:43:21 - Entity_id: 12709553 Executing method...
+Mon, 22/04/2019 10:43:21 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Mon, 22/04/2019 10:43:21 - With values: 300
+Mon, 22/04/2019 10:43:21 - Result = 44
+Mon, 22/04/2019 10:43:21 - 
+Mon, 22/04/2019 10:43:21 - Entity_id: 12955908 Executing method...
+Mon, 22/04/2019 10:43:21 - Executing Method: public static long com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone(long,java.lang.String)
+Mon, 22/04/2019 10:43:21 - With values: 25
+Mon, 22/04/2019 10:43:21 - Result = 25
+Mon, 22/04/2019 10:43:21 - 
+Mon, 22/04/2019 10:43:21 - Entity_id: 12955908 Executing method...
+Mon, 22/04/2019 10:43:21 - Entity_id: 536227 Slicing...
+Mon, 22/04/2019 10:43:21 - Entity_id: 536516 Slicing...
+Mon, 22/04/2019 10:43:21 - Entity_id: 12709553 Generating compiled jar...
+Mon, 22/04/2019 10:43:21 - Entity_id: 12709553 Slicing...
+Mon, 22/04/2019 10:43:21 - Entity_id: 12709553 Extracting sliced zip file...
+Mon, 22/04/2019 10:43:21 - Entity_id: 12709553 Generating Build.xml...
+Mon, 22/04/2019 10:43:22 - Entity_id: 12955908 Executing method...
+Mon, 22/04/2019 10:43:22 - Executing Method: public static long com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone(long,java.lang.String)
+Mon, 22/04/2019 10:43:22 - With values: 25
+Mon, 22/04/2019 10:43:22 - Result = 25
+Mon, 22/04/2019 10:43:22 - 
+Mon, 22/04/2019 10:59:02 - Genie Search API
+Mon, 22/04/2019 10:59:02 - 
+Mon, 22/04/2019 10:59:02 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:59:02 - 
+Mon, 22/04/2019 10:59:02 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:59:02 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:59:02 - database-user = root
+Mon, 22/04/2019 10:59:02 - database-password = ***
+Mon, 22/04/2019 10:59:02 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:59:02 - 
+Mon, 22/04/2019 10:59:02 - Genie Search API
+Mon, 22/04/2019 10:59:02 - 
+Mon, 22/04/2019 10:59:29 - Genie Search API
+Mon, 22/04/2019 10:59:29 - 
+Mon, 22/04/2019 10:59:29 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 10:59:29 - 
+Mon, 22/04/2019 10:59:29 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 10:59:29 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 10:59:29 - database-user = root
+Mon, 22/04/2019 10:59:29 - database-password = ***
+Mon, 22/04/2019 10:59:29 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 10:59:29 - 
+Mon, 22/04/2019 10:59:29 - Genie Search API
+Mon, 22/04/2019 10:59:29 - 
+Mon, 22/04/2019 11:00:04 - Genie Search API
+Mon, 22/04/2019 11:00:04 - 
+Mon, 22/04/2019 11:00:04 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 11:00:04 - 
+Mon, 22/04/2019 11:00:04 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 11:00:04 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 11:00:04 - database-user = root
+Mon, 22/04/2019 11:00:04 - database-password = ***
+Mon, 22/04/2019 11:00:04 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 11:00:04 - 
+Mon, 22/04/2019 11:00:04 - Genie Search API
+Mon, 22/04/2019 11:00:04 - 
+Mon, 22/04/2019 11:05:48 - Genie Search API
+Mon, 22/04/2019 11:05:48 - 
+Mon, 22/04/2019 11:05:48 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 11:05:48 - 
+Mon, 22/04/2019 11:05:48 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 11:05:48 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 11:05:48 - database-user = root
+Mon, 22/04/2019 11:05:48 - database-password = ***
+Mon, 22/04/2019 11:05:48 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 11:05:48 - 
+Mon, 22/04/2019 11:05:48 - Genie Search API
+Mon, 22/04/2019 11:05:48 - 
+Mon, 22/04/2019 11:21:03 - Genie Search API
+Mon, 22/04/2019 11:21:03 - 
+Mon, 22/04/2019 11:21:03 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 11:21:03 - 
+Mon, 22/04/2019 11:21:03 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 11:21:03 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 11:21:03 - database-user = root
+Mon, 22/04/2019 11:21:03 - database-password = ***
+Mon, 22/04/2019 11:21:03 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 11:21:03 - 
+Mon, 22/04/2019 11:21:03 - Genie Search API
+Mon, 22/04/2019 11:21:03 - 
+Mon, 22/04/2019 11:35:19 - Genie Search API
+Mon, 22/04/2019 11:35:19 - 
+Mon, 22/04/2019 11:35:19 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 11:35:19 - 
+Mon, 22/04/2019 11:35:19 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 11:35:19 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 11:35:19 - database-user = root
+Mon, 22/04/2019 11:35:19 - database-password = ***
+Mon, 22/04/2019 11:35:19 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 11:35:19 - 
+Mon, 22/04/2019 11:35:19 - Genie Search API
+Mon, 22/04/2019 11:35:19 - 
+Mon, 22/04/2019 11:43:32 - Genie Search API
+Mon, 22/04/2019 11:43:32 - 
+Mon, 22/04/2019 11:43:32 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 11:43:32 - 
+Mon, 22/04/2019 11:43:32 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 11:43:32 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 11:43:32 - database-user = root
+Mon, 22/04/2019 11:43:32 - database-password = ***
+Mon, 22/04/2019 11:43:32 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 11:43:32 - 
+Mon, 22/04/2019 11:43:32 - Genie Search API
+Mon, 22/04/2019 11:43:32 - 
+Mon, 22/04/2019 11:44:20 - Genie Search API
+Mon, 22/04/2019 11:44:23 - 
+Mon, 22/04/2019 11:44:23 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 11:44:23 - 
+Mon, 22/04/2019 11:44:23 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 11:44:23 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 11:44:23 - database-user = root
+Mon, 22/04/2019 11:44:24 - database-password = ***
+Mon, 22/04/2019 11:44:24 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 11:44:24 - 
+Mon, 22/04/2019 11:44:24 - Genie Search API
+Mon, 22/04/2019 11:44:24 - 
+Mon, 22/04/2019 11:44:54 - Genie Search API
+Mon, 22/04/2019 11:44:54 - 
+Mon, 22/04/2019 11:44:54 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 11:44:54 - 
+Mon, 22/04/2019 11:44:54 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 11:44:54 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 11:44:54 - database-user = root
+Mon, 22/04/2019 11:44:54 - database-password = ***
+Mon, 22/04/2019 11:44:54 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 11:44:54 - 
+Mon, 22/04/2019 11:44:54 - Genie Search API
+Mon, 22/04/2019 11:44:54 - 
+Mon, 22/04/2019 11:44:54 - 
+Mon, 22/04/2019 11:44:54 - Solr Index Path esperado   : D:\Sourcerer_portable\repositories\sf_110\solr-repo\data\index
+Mon, 22/04/2019 11:44:54 - Solr Index Path configurado: D:\Sourcerer_portable\repositories\test_repo\solr-repo\data\index
+Mon, 22/04/2019 11:44:54 - 
+Mon, 22/04/2019 11:51:08 - Genie Search API
+Mon, 22/04/2019 11:51:08 - 
+Mon, 22/04/2019 11:51:08 - /C:/GitHub/genie-search-api/target/test-classes/geniesearchapi.properties
+Mon, 22/04/2019 11:51:08 - 
+Mon, 22/04/2019 11:51:08 - input-repo = D:\Sourcerer_portable\repositories\sf_110
+Mon, 22/04/2019 11:51:08 - database-url = jdbc:mysql://localhost:3306/sf_110
+Mon, 22/04/2019 11:51:08 - database-user = root
+Mon, 22/04/2019 11:51:08 - database-password = ***
+Mon, 22/04/2019 11:51:08 - webserver-url = http://localhost:8080
+Mon, 22/04/2019 11:51:08 - 
+Mon, 22/04/2019 11:51:08 - Genie Search API
+Mon, 22/04/2019 11:51:08 - 
+Mon, 22/04/2019 11:51:09 - 
+Mon, 22/04/2019 11:51:09 - Solr Index Path esperado   : D:\Sourcerer_portable\repositories\sf_110\solr-repo\data\index
+Mon, 22/04/2019 11:51:09 - Solr Index Path configurado: D:\Sourcerer_portable\repositories\test_repo\solr-repo\data\index
+Mon, 22/04/2019 11:51:09 - 
+Mon, 22/04/2019 11:51:10 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\slice\12709553.zip
+Mon, 22/04/2019 11:51:10 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\extract-temp\12709553
+Mon, 22/04/2019 11:51:10 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\jar\12709553.jar
+Mon, 22/04/2019 11:51:10 - Entity_id: 12709553 Executing method...
+Mon, 22/04/2019 11:51:10 - Entity_id: 12709553 Generating compiled jar...
+Mon, 22/04/2019 11:51:10 - Entity_id: 12709553 Slicing...
+Mon, 22/04/2019 11:51:53 - Entity_id: 12709553 Extracting sliced zip file...
+Mon, 22/04/2019 11:51:53 - Entity_id: 12709553 Generating Build.xml...
+Mon, 22/04/2019 11:51:57 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Mon, 22/04/2019 11:51:57 - With values: 4
+Mon, 22/04/2019 11:51:57 - Result = 4
+Mon, 22/04/2019 11:51:57 - 
+Mon, 22/04/2019 11:51:57 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\slice\12709553.zip
+Mon, 22/04/2019 11:51:57 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\extract-temp\12709553
+Mon, 22/04/2019 11:51:57 - Entity_id: 12709553 Deleting: D:\Sourcerer_portable\repositories\sf_110\methods\jar\12709553.jar
+Mon, 22/04/2019 11:51:57 - Entity_id: 12709553 Slicing...
+Mon, 22/04/2019 11:52:29 - Entity_id: 12709553 Generating compiled jar...
+Mon, 22/04/2019 11:52:29 - Entity_id: 12709553 Slicing...
+Mon, 22/04/2019 11:52:29 - Entity_id: 12709553 Extracting sliced zip file...
+Mon, 22/04/2019 11:52:29 - Entity_id: 12709553 Generating Build.xml...
+Mon, 22/04/2019 11:52:33 - Entity_id: 12709553 Getting source code...
+Mon, 22/04/2019 11:52:33 - Entity_id: 12709553 Executing method...
+Mon, 22/04/2019 11:52:33 - Executing Method: public static byte org.javathena.core.utiles.Functions.parseIntToByte(int) throws java.lang.Exception
+Mon, 22/04/2019 11:52:33 - With values: 300
+Mon, 22/04/2019 11:52:33 - Result = 44
+Mon, 22/04/2019 11:52:33 - 
+Mon, 22/04/2019 11:52:33 - Entity_id: 12955908 Executing method...
+Mon, 22/04/2019 11:52:33 - Executing Method: public static long com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone(long,java.lang.String)
+Mon, 22/04/2019 11:52:33 - With values: 25
+Mon, 22/04/2019 11:52:33 - Result = 25
+Mon, 22/04/2019 11:52:33 - 
+Mon, 22/04/2019 11:52:33 - Entity_id: 12955908 Executing method...
+Mon, 22/04/2019 11:52:33 - Entity_id: 536227 Slicing...
+Mon, 22/04/2019 11:52:33 - Entity_id: 536516 Slicing...
+Mon, 22/04/2019 11:52:33 - Entity_id: 12709553 Generating compiled jar...
+Mon, 22/04/2019 11:52:33 - Entity_id: 12709553 Slicing...
+Mon, 22/04/2019 11:52:33 - Entity_id: 12709553 Extracting sliced zip file...
+Mon, 22/04/2019 11:52:33 - Entity_id: 12709553 Generating Build.xml...
+Mon, 22/04/2019 11:52:34 - Entity_id: 12955908 Executing method...
+Mon, 22/04/2019 11:52:34 - Executing Method: public static long com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone(long,java.lang.String)
+Mon, 22/04/2019 11:52:34 - With values: 25
+Mon, 22/04/2019 11:52:34 - Result = 25
+Mon, 22/04/2019 11:52:34 - 

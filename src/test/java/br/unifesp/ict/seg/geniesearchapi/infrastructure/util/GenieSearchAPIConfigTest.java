@@ -1,10 +1,12 @@
 package br.unifesp.ict.seg.geniesearchapi.infrastructure.util;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import org.junit.Test;
@@ -58,4 +60,22 @@ public class GenieSearchAPIConfigTest {
 		}
 	}
 
+	@Test
+	public void checkSolrHomeFolder() throws Exception {
+		Path solrHomePath = GenieSearchAPIConfig.getSolrConfigPath();
+		assertNotNull(solrHomePath);
+		assertEquals(solrHomePath, GenieSearchAPIConfig.getSolrConfigPath());
+	}
+
+	@Test
+	public void checkSolrReaderDir() throws Exception {
+		Path solrReaderDirPath = GenieSearchAPIConfig.getSolrReaderDirPath();
+		assertNotNull(solrReaderDirPath);
+		assertEquals(solrReaderDirPath, GenieSearchAPIConfig.getSolrIndexPath());
+	}
+
+	@Test
+	public void checkSolrNumDocs() throws Exception {
+		assertEquals(new Integer(192421), GenieSearchAPIConfig.getSolrNumDocs());
+	}
 }

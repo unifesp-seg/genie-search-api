@@ -182,9 +182,23 @@ public class GenieMethodTest {
 
 	@Test
 	public void getSourceCode() throws Exception {
-		// TODO implementar
+		String code = "";
+		code += "public static byte parseIntToByte(int value) throws Exception\n";
+		code += "    {\n";
+		code += "        \n";
+		code += "        byte val = 0;\n";
+		code += "        if(value > 127)\n";
+		code += "            value = (value - 256);\n";
+		code += "        if(value > Byte.MIN_VALUE && value < Byte.MAX_VALUE)\n";
+		code += "            val =(byte)value;\n";
+		code += "        else\n";
+		code += "            throw new Exception(\"Value doit etre inferieur a 256 et superieur a -128\");\n";
+		code += "        return val;\n";
+		code += "    }";
+		
 		GenieMethod genieMethod = genieMethodRepository.findByEntityId(12709553);
-		assertNotNull(genieMethod.getSourceCode());
+		String sourceCode = genieMethod.getSourceCode();
+		assertNotNull(sourceCode);
+		assertEquals(code,  sourceCode);
 	}
-
 }

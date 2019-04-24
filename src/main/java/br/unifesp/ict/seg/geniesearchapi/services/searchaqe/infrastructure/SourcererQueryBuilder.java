@@ -34,6 +34,10 @@ public class SourcererQueryBuilder {
 		return methodPart + returnTypePart + paramsPart;
 	}
 
+	public String getSourcererExpandedQuery(Long entityId) throws Exception {
+		return "entity_id:" + entityId;
+	}
+
 	private void prioritizeOrininalTerms(List<QueryTerm> queryTerms){
 		for(QueryTerm queryTerm : queryTerms){
 			String originalTerm = queryTerm.getExpandedTerms().get(0);
@@ -115,10 +119,18 @@ public class SourcererQueryBuilder {
 	}
 	
 	public SearchResult search(String methodName, String returnType, String params) throws Exception {
-		String query = this.getSourcererExpandedQuery(methodName, returnType, params);
-		SearchAdapter searchAdapter = SearchAdapter.create(GenieSearchAPIConfig.getWebServerURL());
-		SearchResult searchResult = searchAdapter.search(query);
-		return searchResult;
+		String sourcererQuery = this.getSourcererExpandedQuery(methodName, returnType, params);
+		return this.search(sourcererQuery);
 	}
 
+	public SearchResult search(Long entityId) throws Exception {
+		String sourcererQuery = this.getSourcererExpandedQuery(entityId);
+		return this.search(sourcererQuery);
+	}
+
+	private SearchResult search(String sourcererQuery) throws Exception {
+		SearchAdapter searchAdapter = SearchAdapter.create(GenieSearchAPIConfig.getWebServerURL());
+		SearchResult searchResult = searchAdapter.search(sourcererQuery);
+		return searchResult;
+	}
 }

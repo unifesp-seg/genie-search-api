@@ -6,6 +6,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
+import org.apache.commons.lang.StringUtils;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -13,6 +14,7 @@ import org.junit.rules.ExpectedException;
 
 import br.unifesp.ict.seg.geniesearchapi.infrastructure.GenieMethodRepository;
 import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.GenieSearchAPIConfig;
+import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.domain.Expander;
 
 public class GenieMethodTest {
 
@@ -195,10 +197,10 @@ public class GenieMethodTest {
 		code += "            throw new Exception(\"Value doit etre inferieur a 256 et superieur a -128\");\n";
 		code += "        return val;\n";
 		code += "    }";
-		
+
 		GenieMethod genieMethod = genieMethodRepository.findByEntityId(12709553);
 		String sourceCode = genieMethod.getSourceCode();
 		assertNotNull(sourceCode);
-		assertEquals(code,  sourceCode);
+		assertEquals(code, sourceCode);
 	}
 }

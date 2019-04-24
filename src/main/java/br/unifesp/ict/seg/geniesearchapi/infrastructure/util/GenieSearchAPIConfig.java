@@ -28,6 +28,9 @@ public class GenieSearchAPIConfig {
 		try {
 			properties = new Properties();
 			URL url = ClassLoader.getSystemResource(configFileName);
+			if(url == null) {
+				throw new RuntimeException("File not found: " + ClassLoader.getSystemResource("")+configFileName);
+			}
 			properties.load(url.openStream());
 
 			InputStream is = url.openStream();
@@ -253,5 +256,9 @@ public class GenieSearchAPIConfig {
 		}
 		br.close();
 		return null;
+	}
+
+	public static Path getThesauriPath() {
+		return Paths.get(getRepoPath().getParent().getParent()+"", "thesauri");
 	}
 }

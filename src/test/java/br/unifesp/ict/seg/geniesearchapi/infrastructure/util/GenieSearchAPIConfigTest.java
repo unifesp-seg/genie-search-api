@@ -32,6 +32,7 @@ public class GenieSearchAPIConfigTest {
 		assertTrue(GenieSearchAPIConfig.getSlicedPath().toFile().isDirectory());
 		assertTrue(GenieSearchAPIConfig.getExtractTempPath().toFile().isDirectory());
 		assertTrue(GenieSearchAPIConfig.getJarPath().toFile().isDirectory());
+		assertTrue(GenieSearchAPIConfig.getThesauriPath().toFile().isDirectory());
 		
 		assertEquals(GenieSearchAPIConfig.getCrawledProjectsPath().getParent()+"", GenieSearchAPIConfig.getRepoPath().toString());
 		assertEquals("crawled-projects", GenieSearchAPIConfig.getCrawledProjectsPath().getFileName().toString());

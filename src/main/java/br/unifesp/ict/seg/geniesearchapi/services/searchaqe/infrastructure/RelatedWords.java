@@ -2,6 +2,7 @@ package br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure;
 
 import java.io.FileReader;
 import java.io.Reader;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -11,6 +12,7 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.lang.StringUtils;
 
+import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.GenieSearchAPIConfig;
 import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.domain.RelatedWordsResult;
 import edu.smu.tspell.wordnet.AdjectiveSynset;
 import edu.smu.tspell.wordnet.NounSynset;
@@ -37,7 +39,7 @@ public class RelatedWords {
 		if(StringUtils.isBlank(word))
 			return;
 
-		String wordNetDatabasePath = ClassLoader.getSystemResource("thesauri/wordnet-database").getPath();
+		String wordNetDatabasePath = Paths.get(GenieSearchAPIConfig.getThesauriPath()+"", "wordnet-database")+"";
 		System.setProperty("wordnet.database.dir", wordNetDatabasePath);
 		VerbSynset verbSynset;
 		NounSynset nounSynset;
@@ -151,7 +153,7 @@ public class RelatedWords {
 		if(StringUtils.isBlank(word))
 			return null;
 		
-		Reader codeDatabase = new FileReader(ClassLoader.getSystemResource("thesauri/code-database.csv").getPath());
+		Reader codeDatabase = new FileReader(Paths.get(GenieSearchAPIConfig.getThesauriPath()+"", "code-database.csv").toFile());
 		Iterable<CSVRecord> records = CSVFormat.RFC4180.parse(codeDatabase);
 
 		List<String> syns = new ArrayList<String>();

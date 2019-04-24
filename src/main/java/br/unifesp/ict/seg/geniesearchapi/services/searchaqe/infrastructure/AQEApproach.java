@@ -31,6 +31,11 @@ public class AQEApproach {
 	}
 
 	public AQEApproach(String expanders, boolean relaxReturn, boolean relaxParams, boolean contextRelevants, boolean filterMethodNameTermsByParameter) throws Exception {
+		
+		if(expanders == null) {
+			expanders = "";
+		}
+		
 		this.relaxReturn = relaxReturn;
 		this.relaxParams = relaxParams;
 		this.contextRelevants = contextRelevants;

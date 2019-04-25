@@ -6,7 +6,8 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
-import org.apache.commons.lang.StringUtils;
+import java.io.IOException;
+
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -14,7 +15,6 @@ import org.junit.rules.ExpectedException;
 
 import br.unifesp.ict.seg.geniesearchapi.infrastructure.GenieMethodRepository;
 import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.GenieSearchAPIConfig;
-import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.domain.Expander;
 
 public class GenieMethodTest {
 
@@ -24,8 +24,8 @@ public class GenieMethodTest {
 	private GenieMethodRepository genieMethodRepository = new GenieMethodRepository();
 
 	@Before
-	public void initialize() {
-		GenieSearchAPIConfig.activate();
+	public void initialize() throws IOException {
+		GenieSearchAPIConfig.loadProperties();
 	}
 
 	@Test

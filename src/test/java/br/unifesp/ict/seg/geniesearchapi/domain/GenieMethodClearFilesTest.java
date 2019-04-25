@@ -3,6 +3,7 @@ package br.unifesp.ict.seg.geniesearchapi.domain;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
 import java.nio.file.Paths;
 
 import org.junit.Before;
@@ -16,8 +17,8 @@ public class GenieMethodClearFilesTest {
 	private GenieMethodRepository genieMethodRepository = new GenieMethodRepository();
 
 	@Before
-	public void initialize() {
-		GenieSearchAPIConfig.activate();
+	public void initialize() throws IOException {
+		GenieSearchAPIConfig.loadProperties();
 	}
 
 	@Test

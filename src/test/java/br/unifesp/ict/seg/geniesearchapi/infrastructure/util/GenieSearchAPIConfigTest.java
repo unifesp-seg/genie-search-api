@@ -4,17 +4,70 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class GenieSearchAPIConfigTest {
 	
+	@Before
+	public void initialize() throws IOException {
+		GenieSearchAPIConfig.loadProperties();
+	}
+	
 	@Test
 	public void loadFromFile() throws Exception {
+		assertEquals(Paths.get("D:/Sourcerer_portable/repositories/sf_110/crawled-projects")+"", GenieSearchAPIConfig.getCrawledProjectsPath()+"");
+		assertEquals("jdbc:mysql://localhost:3306/sf_110", GenieSearchAPIConfig.getDatabaseURL());
+		assertEquals("root", GenieSearchAPIConfig.getDatabaseUser());
+		assertEquals("123", GenieSearchAPIConfig.getDatabasePassword());
+		assertEquals("http://localhost:8080", GenieSearchAPIConfig.getWebServerURL());
+	}
+
+	@Test
+	public void loadFromMainMethodArgs() throws Exception {
+
+		//Before: Reload from config file
+		assertEquals(Paths.get("D:/Sourcerer_portable/repositories/sf_110/crawled-projects")+"", GenieSearchAPIConfig.getCrawledProjectsPath()+"");
+		assertEquals("jdbc:mysql://localhost:3306/sf_110", GenieSearchAPIConfig.getDatabaseURL());
+		assertEquals("root", GenieSearchAPIConfig.getDatabaseUser());
+		assertEquals("123", GenieSearchAPIConfig.getDatabasePassword());
+		assertEquals("http://localhost:8080", GenieSearchAPIConfig.getWebServerURL());
+		
+		String[] args = new String[5];
+		args[0] = "--input-repo=D:/Sourcerer_portable/repositories/sf_110-sys/crawled-projects";
+		args[1] = "--database-url=jdbc:mysql://localhost:3306/sf_110" + "-sys";
+		args[2] = "--database-user=root" + "-sys";
+		args[3] = "--database-password=123" + "-sys";
+		args[4] = "--webserver-url=http://localhost:8080" + "-sys";
+		
+		//Reload from args
+		GenieSearchAPIConfig.loadProperties(args);
+		assertEquals(Paths.get("D:/Sourcerer_portable/repositories/sf_110-sys/crawled-projects")+"", GenieSearchAPIConfig.getCrawledProjectsPath()+"");
+		assertEquals("jdbc:mysql://localhost:3306/sf_110-sys", GenieSearchAPIConfig.getDatabaseURL());
+		assertEquals("root-sys", GenieSearchAPIConfig.getDatabaseUser());
+		assertEquals("123-sys", GenieSearchAPIConfig.getDatabasePassword());
+		assertEquals("http://localhost:8080-sys", GenieSearchAPIConfig.getWebServerURL());
+
+		//Reload from args: 2 properties only
+		GenieSearchAPIConfig.loadProperties();
+		args = new String[2];
+		args[0] = "--input-repo=D:/Sourcerer_portable/repositories/sf_110-sys/crawled-projects";
+		args[1] = "--database-user=root" + "-sys";
+		GenieSearchAPIConfig.loadProperties(args);
+		assertEquals(Paths.get("D:/Sourcerer_portable/repositories/sf_110-sys/crawled-projects")+"", GenieSearchAPIConfig.getCrawledProjectsPath()+"");
+		assertEquals("jdbc:mysql://localhost:3306/sf_110", GenieSearchAPIConfig.getDatabaseURL());
+		assertEquals("root-sys", GenieSearchAPIConfig.getDatabaseUser());
+		assertEquals("123", GenieSearchAPIConfig.getDatabasePassword());
+		assertEquals("http://localhost:8080", GenieSearchAPIConfig.getWebServerURL());
+
+		//Reload from config file
+		GenieSearchAPIConfig.loadProperties();
 		assertEquals(Paths.get("D:/Sourcerer_portable/repositories/sf_110/crawled-projects")+"", GenieSearchAPIConfig.getCrawledProjectsPath()+"");
 		assertEquals("jdbc:mysql://localhost:3306/sf_110", GenieSearchAPIConfig.getDatabaseURL());
 		assertEquals("root", GenieSearchAPIConfig.getDatabaseUser());

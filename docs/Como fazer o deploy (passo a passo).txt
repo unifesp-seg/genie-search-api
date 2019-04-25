@@ -1,0 +1,9 @@
+﻿a) No IDE
+
+1. Atualizar RELEASE.txt, criando um novo texto de versão com as alterações realizadas
+
+2. Atualizar build.xml na property name="version" com o número da versão nova 
+
+3. Executar o build.xml
+
+4. Comitar as alterações no GitHub

@@ -2,14 +2,23 @@ package br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.IOException;
+
+import org.junit.Before;
 import org.junit.Test;
 
+import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.GenieSearchAPIConfig;
 import edu.uci.ics.sourcerer.services.search.adapter.SearchResult;
 
 public class SourcererQueryBuilderTest {
 
+	@Before
+	public void initialize() throws IOException {
+		GenieSearchAPIConfig.loadProperties();
+	}
+	
 	@Test
-	public void querySintaxTest() throws Exception {
+	public void querySintax() throws Exception {
 		String m = "getSystemProperty";
 		String p = "String";
 		String r = "java.security.AccessController.doPrivileged";
@@ -32,7 +41,7 @@ public class SourcererQueryBuilderTest {
 	}
 
 	@Test
-	public void aqeSintaxTest() throws Exception {
+	public void aqeSintax() throws Exception {
 		String m = "getSystemProperty";
 		String p = "String";
 		String r = "java.security.AccessController.doPrivileged";
@@ -55,7 +64,7 @@ public class SourcererQueryBuilderTest {
 	}
 
 	@Test
-	public void aqeRelaxSintaxTest() throws Exception {
+	public void aqeRelaxSintax() throws Exception {
 		String m = "getSystemProperty";
 		String p = "String";
 		String r = "java.security.AccessController.doPrivileged";
@@ -75,7 +84,7 @@ public class SourcererQueryBuilderTest {
 	}
 	
 	@Test
-	public void searchTest() throws Exception {
+	public void search() throws Exception {
 		String m = "getSystemProperty";
 		String p = "String";
 		String r = "java.security.AccessController.doPrivileged";
@@ -89,14 +98,12 @@ public class SourcererQueryBuilderTest {
 		SourcererQueryBuilder sourcererQueryBuilder = new SourcererQueryBuilder(expanders, relaxReturn, relaxParams, contextRelevants, filterMethodNameTermsByParameter);
 		SearchResult searchResult = sourcererQueryBuilder.search(m, r, p);
 		int totalFound = searchResult.getNumFound();
+		assertEquals(53,totalFound);
 		
-		assertEquals(20,totalFound);
-
 		sourcererQueryBuilder = new SourcererQueryBuilder(expanders, true, true, contextRelevants, filterMethodNameTermsByParameter);
 		searchResult = sourcererQueryBuilder.search(m, r, p);
 		totalFound = searchResult.getNumFound();
-
-		assertEquals(32,totalFound);
+		assertEquals(89,totalFound);
 	}
 
 }

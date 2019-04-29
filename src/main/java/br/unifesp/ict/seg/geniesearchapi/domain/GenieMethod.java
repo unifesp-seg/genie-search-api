@@ -581,13 +581,12 @@ public class GenieMethod {
 	
 	public boolean clearMethodFiles() throws IOException {
 		
-		boolean cleaned = false;
+		boolean cleaned = true;
 		
 		if(this.isContainsSlicedFile()) {
 			LogUtils.getLogger().info("Entity_id: " + this.entityId + " Deleting: " + this.getSlicedFilePath());
 			cleaned = this.getSlicedFilePath().toFile().delete();
 		}
-			
 		
 		File tempIdDir = Paths.get(GenieSearchAPIConfig.getExtractTempPath()+"", this.entityId+"").toFile();
 		if(tempIdDir.isDirectory()) {

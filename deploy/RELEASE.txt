@@ -1,0 +1,51 @@
+********************
+Version 1.6.6
+
+Fixes:
+
+	- Ajustes nos Casos de Teste considerando 3 métodos testados
+
+Features:
+
+
+********************
+Version 1.6.5
+
+Fixes:
+
+	- Correção na forma de ler as propriedades de configuração
+
+Features:
+
+
+********************
+Version 1.6.4
+
+Fixes:
+
+	- Correção na forma de ler as propriedades de configuração
+
+Features:
+
+
+********************
+Version 1.6.3
+
+Fixes:
+
+	- A passagem de parâmentros não ceu certo via System Properties
+
+Features:
+
+	- A passagem de parâmentros via args do método main()
+
+
+********************
+Version 1.6.2
+
+Fixes:
+
+Features:
+
+	- Permitir passar parâmetros de configuração via System Properties
+

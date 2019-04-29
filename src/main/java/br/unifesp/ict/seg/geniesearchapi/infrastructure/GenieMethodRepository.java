@@ -44,4 +44,21 @@ public class GenieMethodRepository extends BaseRepository {
 		return genieMethod;
 	}
 
+	public GenieMethod findByInterfaceElements(String fqn, String params, String returnType) throws Exception {
+		Connection conn = getConnection();
+		Statement stmt = conn.createStatement();
+
+		String sql = "select * from interface_metrics where fqn = '" + fqn + "' and params = '" + params + "' and return_type =  '" + returnType + "'";
+		ResultSet rs = stmt.executeQuery(sql);
+
+		GenieMethod genieMethod = null;
+		while (rs.next()) {
+			genieMethod = new GenieMethod(rs);
+		}
+
+		stmt.close();
+		conn.close();
+
+		return genieMethod;
+	}
 }

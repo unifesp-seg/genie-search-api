@@ -32,46 +32,54 @@ public class GenieSearchAPIConfig {
 	private GenieSearchAPIConfig() {
 	}
 
-	private static boolean loadFromConfigFileName() throws IOException {
+	public static void loadProperties() {
+
+		loadFromConfigFileName();
+
+		postLoadProperties();
+
+	}
+
+	private static boolean hasConfigFileName() {
+		URL url = ClassLoader.getSystemResource(configFileName);
+		return url != null;
+	}
+
+	private static void loadFromConfigFileName() {
 		properties = new Properties();
 
 		URL url = ClassLoader.getSystemResource(configFileName);
-		if (url == null) {
-			return false;
+		if (url != null) {
+			try {
+				properties.load(url.openStream());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
-		properties.load(url.openStream());
-		return true;
 	}
 
-	public static void loadProperties() throws IOException {
-		boolean hasFile = loadFromConfigFileName();
-		
-		if(!hasFile) {
-			throw new RuntimeException("\nFile not found: " + ClassLoader.getSystemResource("") + configFileName + "\n");
-		}
-		
-		postLoadProperties();
-	}
+	public static void loadProperties(String[] mainMethodArgs) {
 
-	public static void loadProperties(String[] mainMethodArgs) throws IOException {
-		
 		loadFromConfigFileName();
 
-		for(String arg : mainMethodArgs) {
-			
+		if (mainMethodArgs == null)
+			mainMethodArgs = new String[0];
+
+		for (String arg : mainMethodArgs) {
+
 			arg = arg.trim();
-			if(!arg.startsWith("--") || !arg.contains("="))
+			if (!arg.startsWith("--") || !arg.contains("="))
 				continue;
-			
+
 			arg = StringUtils.removeStart(arg, "--");
-			String[] map = StringUtils.split(arg,"=");
-			
-			if(map.length != 2)
+			String[] map = StringUtils.split(arg, "=");
+
+			if (map.length != 2)
 				continue;
-			
+
 			String key = map[0].trim();
 			String value = map[1].trim();
-			
+
 			if (P_INPUT_REPO.equals(key))
 				properties.setProperty(P_INPUT_REPO, value);
 
@@ -87,39 +95,21 @@ public class GenieSearchAPIConfig {
 			else if (P_WEBSERVER_URL.equals(key))
 				properties.setProperty(P_WEBSERVER_URL, value);
 		}
-		
+
 		postLoadProperties();
 	}
 
 	private static void postLoadProperties() {
-		try {
 
-			// Properties keys verification
-			if (!isValidProperties()) {
-				throw new RuntimeException("\n\nError loading properties.\n");
-			}
-
-			// crawled-projects folder name verification
-			if (!"crawled-projects".equals(getCrawledProjectsPath().getFileName() + "")) {
-				LogUtils.getLogger().error("");
-				LogUtils.getLogger().error("A pasta dos códigos-fonte do repositório precisa chamar-se 'crawled-projects' no arquivo de propriedades: "
-						+ ClassLoader.getSystemResource("") + configFileName);
-				LogUtils.getLogger().error("O valor atualmente usado é inválido: " + P_INPUT_REPO + " = " + getCrawledProjectsPath());
-				throw new RuntimeException();
-			}
-
-			// Load Sourcerer parameters from properties
+		if (isValidProperties()) {
 			loadSourcererParamsFromProperties();
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			logConfigStatus();
 			createDefaultFolders();
 		}
+
+		logConfigStatus();
 	}
-	
-	private static boolean isValidProperties() {
+
+	public static boolean isValidProperties() {
 
 		if (properties == null)
 			return false;
@@ -135,9 +125,13 @@ public class GenieSearchAPIConfig {
 		return checkProperties;
 	}
 
-	private static void loadSourcererParamsFromProperties() throws Exception {
+	private static void loadSourcererParamsFromProperties() {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
-		properties.store(output, null);
+		try {
+			properties.store(output, null);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		ByteArrayInputStream is = new ByteArrayInputStream(output.toByteArray());
 		ArgumentManager.PROPERTIES_STREAM.setValue(is);
 		JavaRepositoryFactory.INPUT_REPO.permit();
@@ -149,32 +143,55 @@ public class GenieSearchAPIConfig {
 
 	private static void logConfigStatus() {
 
-		if (isValidProperties()) {
-			LogUtils.getLogger().info("");
-			LogUtils.getLogger().info("Genie Search API");
-			LogUtils.getLogger().info("");
-			LogUtils.getLogger().info(ClassLoader.getSystemResource(configFileName).getPath());
-			LogUtils.getLogger().info("");
-			LogUtils.getLogger().info(P_INPUT_REPO + " = " + getRepoPath());
-			LogUtils.getLogger().info(P_DATABASE_URL + " = " + getDatabaseURL());
-			LogUtils.getLogger().info(P_DATABASE_USER + " = " + getDatabaseUser());
-			LogUtils.getLogger().info(P_DATABASE_PASSWORD + " = " + "***");
-			LogUtils.getLogger().info(P_WEBSERVER_URL + " = " + getWebServerURL());
-			LogUtils.getLogger().info("");
-			LogUtils.getLogger().info("Genie Search API");
-			LogUtils.getLogger().info("");
-		} else {
-			String example = "\n\nExemplo para o conteúdo do arquivo:";
-			example += "\n\n# Repository paths";
+		if (!isValidProperties()) {
+			String example = "\n\n# Repository paths";
 			example += "\n" + P_INPUT_REPO + " = D:/Sourcerer_portable/repositories/test_repo/crawled-projects/";
 			example += "\n" + P_DATABASE_URL + " = jdbc:mysql://localhost:3306/test_repo";
 			example += "\n" + P_DATABASE_USER + " = root";
 			example += "\n" + P_DATABASE_PASSWORD + " = 123";
 			example += "\n" + P_INPUT_REPO + " = http://localhost:8080\n";
-			example += "\nCaminho esperado: " + ClassLoader.getSystemResource("") + configFileName + "\n";
-
+			String expectedPath = ClassLoader.getSystemResource("").getPath() + configFileName;
+			expectedPath = StringUtils.replaceOnce(expectedPath,"/","");
 			LogUtils.getLogger().error("");
-			LogUtils.getLogger().error(example);
+			LogUtils.getLogger().error("Genie Search API - Erro ao carregar as propriedades de configuração");
+			LogUtils.getLogger().error("");
+			LogUtils.getLogger().error("Use o arquivo de configuração '" + configFileName + "'");
+			LogUtils.getLogger().error("Caminho esperado: " + expectedPath + "\n");
+			LogUtils.getLogger().error("Exemplo para o conteúdo do arquivo '" + configFileName + "': " + example);
+			LogUtils.getLogger().error("");
+			LogUtils.getLogger().error("Genie Search API");
+			LogUtils.getLogger().error("");
+
+			return;
+		}
+
+		// Properties successfull read
+		String loadFrom = "";
+		if (hasConfigFileName()) {
+			loadFrom = "Arquivo de configuração: " + ClassLoader.getSystemResource(configFileName).getPath();
+			loadFrom = StringUtils.replaceOnce(loadFrom,"/","");
+		} else
+			loadFrom = "Configurações passadas por parâmetro via String args[]";
+
+		LogUtils.getLogger().info("");
+		LogUtils.getLogger().info("Genie Search API");
+		LogUtils.getLogger().info("");
+		LogUtils.getLogger().info(loadFrom);
+		LogUtils.getLogger().info("");
+		LogUtils.getLogger().info(P_INPUT_REPO + " = " + getRepoPath());
+		LogUtils.getLogger().info(P_DATABASE_URL + " = " + getDatabaseURL());
+		LogUtils.getLogger().info(P_DATABASE_USER + " = " + getDatabaseUser());
+		LogUtils.getLogger().info(P_DATABASE_PASSWORD + " = " + "***");
+		LogUtils.getLogger().info(P_WEBSERVER_URL + " = " + getWebServerURL());
+		LogUtils.getLogger().info("");
+		LogUtils.getLogger().info("Genie Search API");
+		LogUtils.getLogger().info("");
+
+		// crawled-projects folder name verification
+		if (!"crawled-projects".equals(getCrawledProjectsPath().getFileName() + "")) {
+			LogUtils.getLogger().error("");
+			LogUtils.getLogger().error("Pasta diferente de 'crawled-projects': " + ClassLoader.getSystemResource("") + configFileName);
+			LogUtils.getLogger().error("O valor atualmente usado é inválido: " + P_INPUT_REPO + " = " + getCrawledProjectsPath());
 		}
 
 		// Solr connection
@@ -209,6 +226,11 @@ public class GenieSearchAPIConfig {
 	}
 
 	private static void createDefaultFolders() {
+		
+		//Create subfolders, only if repo folder exists
+		if(!getRepoPath().toFile().isDirectory())
+			return;
+		
 		File dir = getSolrConfigPath().toFile();
 		if (!dir.isDirectory())
 			dir.mkdirs();

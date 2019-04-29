@@ -23,10 +23,10 @@ public class GenieMethodClearFilesTest {
 
 	@Test
 	public void clearMethodFiles() throws Exception {
-		// interface_metrics_id: 3178472 = 12709553: entity_id
-		long entityId = 12709553;
-
-		GenieMethod genieMethod = genieMethodRepository.findByEntityId(entityId);
+		String fqn = "org.javathena.core.utiles.Functions.parseIntToByte";
+		String params = "(int)";
+		String returnType = "byte";
+		GenieMethod genieMethod = genieMethodRepository.findByInterfaceElements(fqn, params, returnType);
 		assertTrue(genieMethod.isAllowsExecution());
 
 		// Without files

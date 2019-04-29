@@ -2,39 +2,55 @@ package br.unifesp.ict.seg.geniesearchapi.infrastructure;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
+
+import org.junit.Before;
 import org.junit.Test;
 
 import br.unifesp.ict.seg.geniesearchapi.domain.GenieMethod;
+import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.GenieSearchAPIConfig;
 
 public class MethodRepositoryTest extends BaseRepository {
 
 	private GenieMethodRepository repository = new GenieMethodRepository();
 
+	@Before
+	public void initialize() throws IOException {
+		GenieSearchAPIConfig.loadProperties();
+	}
+	
 	@Test
 	public void countAllInterfaceMetrics() throws Exception {
 		int total = repository.countAllInterfaceMetrics();
-		assertEquals(6319, total);
+		assertEquals(266941, total);
 	}
 	
 	@Test
 	public void  findByEntityId() throws Exception {
 		
-		GenieMethod genieMethod = repository.findByEntityId(12709553);
+		String fqn = "org.javathena.core.utiles.Functions.parseIntToByte";
+		String params = "(int)"; 
+		String returnType = "byte";
+		GenieMethod genieMethodAux = repository.findByInterfaceElements(fqn, params, returnType);
+		assertNotNull(genieMethodAux);
 
-		assertEquals(Long.valueOf(3178472), genieMethod.getId());
+		GenieMethod genieMethod = repository.findByEntityId(genieMethodAux.getEntityId());
+
+		assertEquals(genieMethodAux.getId(), genieMethod.getId());
 		assertEquals("CRAWLED", genieMethod.getProjectType());
-		assertEquals(Long.valueOf(1489), genieMethod.getProjectId());
+		assertEquals(genieMethodAux.getProjectId(), genieMethod.getProjectId());
 		assertEquals("javathena", genieMethod.getProjectName());
 		assertEquals("METHOD", genieMethod.getEntityType());
-		assertEquals(Long.valueOf(12709553), genieMethod.getEntityId());
+		assertEquals(genieMethodAux.getEntityId(), genieMethod.getEntityId());
 		assertEquals("PUBLIC,STATIC", genieMethod.getModifiers());
 		assertEquals("org.javathena.core.utiles.Functions.parseIntToByte", genieMethod.getFqn());
 		assertEquals("int", genieMethod.getParams());
 		assertEquals("byte", genieMethod.getReturnType());
 		assertTrue(genieMethod.isProcessed());
-		assertTrue(genieMethod.isProcessed());
+		assertTrue(genieMethod.isProcessedParams());
 		assertEquals(1, genieMethod.getTotalParams());
 		assertEquals(4, genieMethod.getTotalWordsMethod());
 		assertEquals(1, genieMethod.getTotalWordsClass());

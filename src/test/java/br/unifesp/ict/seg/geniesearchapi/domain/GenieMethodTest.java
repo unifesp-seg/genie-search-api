@@ -18,8 +18,9 @@ import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.GenieSearchAPIConfi
 
 public class GenieMethodTest {
 
-	private long entityId1 = 536227;
-	private long entityId2 = 536516;
+	private GenieMethod genieMethodTest1 = null;
+	private GenieMethod genieMethodTest2 = null;
+	private GenieMethod genieMethodTest3 = null;
 
 	private GenieMethodRepository genieMethodRepository = new GenieMethodRepository();
 
@@ -30,7 +31,7 @@ public class GenieMethodTest {
 
 	@Test
 	public void slice1() throws Exception {
-		GenieMethod genieMethod = new GenieMethod(entityId1);
+		GenieMethod genieMethod = this.getGenieMethodTest1();
 		boolean result = genieMethod.slice();
 		assertTrue(result);
 		assertTrue(genieMethod.isContainsSlicedFile());
@@ -38,7 +39,7 @@ public class GenieMethodTest {
 
 	@Test
 	public void slice2() throws Exception {
-		GenieMethod genieMethod = new GenieMethod(entityId2);
+		GenieMethod genieMethod = this.getGenieMethodTest2();
 		boolean result = genieMethod.slice();
 		assertTrue(result);
 		assertTrue(genieMethod.isContainsSlicedFile());
@@ -46,11 +47,7 @@ public class GenieMethodTest {
 
 	@Test
 	public void generateJar() throws Exception {
-
-		// interface_metrics_id: 3178472 = 12709553: entity_id
-		int entityId = 12709553;
-
-		GenieMethod genieMethod = genieMethodRepository.findByEntityId(entityId);
+		GenieMethod genieMethod = this.getGenieMethodTest1();
 		boolean result = genieMethod.generateJar();
 		assertTrue(genieMethod.isContainsCompiledJar());
 
@@ -59,8 +56,8 @@ public class GenieMethodTest {
 
 	@Test
 	public void getReflectionParams() throws Exception {
-		// (java.lang.String,java.lang.Integer)
-		GenieMethod genieMethod = genieMethodRepository.findByEntityId(13031687);
+		GenieMethod genieMethod = this.getGenieMethodTest3();
+
 		assertEquals("java.lang.String,java.lang.Integer", genieMethod.getParams());
 		assertEquals(2, genieMethod.getTotalParams());
 		Class<?>[] reflectionParams = genieMethod.getReflectionParams();
@@ -69,8 +66,7 @@ public class GenieMethodTest {
 		assertEquals(Integer.class, reflectionParams[1]);
 
 		genieMethod = new GenieMethod(1L);
-		genieMethod.setParams(
-				"java.lang.String, java.lang.Boolean, java.lang.Character, java.lang.Byte, java.lang.Short, java.lang.Integer, java.lang.Long, java.lang.Float, java.lang.Double");
+		genieMethod.setParams("java.lang.String, java.lang.Boolean, java.lang.Character, java.lang.Byte, java.lang.Short, java.lang.Integer, java.lang.Long, java.lang.Float, java.lang.Double");
 		reflectionParams = genieMethod.getReflectionParams();
 		assertEquals(9, reflectionParams.length);
 		assertEquals(String.class, reflectionParams[0]);
@@ -127,8 +123,8 @@ public class GenieMethodTest {
 
 	@Test
 	public void isAllowsExecution() throws Exception {
-		// (java.lang.String,java.lang.Integer)
-		GenieMethod genieMethod = genieMethodRepository.findByEntityId(13031687);
+		GenieMethod genieMethod = this.getGenieMethodTest3();
+
 		assertTrue(genieMethod.isAllowsExecution());
 
 		genieMethod.setParams("String, int");
@@ -137,17 +133,13 @@ public class GenieMethodTest {
 		genieMethod.setParams("String, Int");
 		assertFalse(genieMethod.isAllowsExecution());
 
-		// return type
-		genieMethod = genieMethodRepository.findByEntityId(12692246);
-		assertFalse(genieMethod.isAllowsExecution());
+		genieMethod = this.getGenieMethodTest2();
+		assertTrue(genieMethod.isAllowsExecution());
 	}
 
 	@Test
 	public void execute() throws Exception {
-		// interface_metrics_id: 3178472 = 12709553: entity_id
-		long entityId = 12709553;
-
-		GenieMethod genieMethod = genieMethodRepository.findByEntityId(entityId);
+		GenieMethod genieMethod = this.getGenieMethodTest1();
 		assertTrue(genieMethod.isAllowsExecution());
 		Object result = genieMethod.execute("300");
 		assertEquals(Byte.class, result.getClass());
@@ -156,10 +148,9 @@ public class GenieMethodTest {
 
 	@Test
 	public void execute2() throws Exception {
-		Object result = null;
-		GenieMethod genieMethod = genieMethodRepository.findByEntityId(12955908);
+		GenieMethod genieMethod = this.getGenieMethodTest2();
 		assertTrue(genieMethod.isAllowsExecution());
-		result = genieMethod.execute("25,C:/_mestrado/smis-test/tempfile.txt");
+		Object result = genieMethod.execute("25,C:/_mestrado/smis-test/tempfile.txt");
 		assertEquals(Long.class, result.getClass());
 		assertEquals(new Long("25"), result);
 	}
@@ -169,11 +160,10 @@ public class GenieMethodTest {
 
 	@Test
 	public void executeVarargs() throws Exception {
-		Object result = null;
-		GenieMethod genieMethod = genieMethodRepository.findByEntityId(12955908);
+		GenieMethod genieMethod = this.getGenieMethodTest2();
 		assertTrue(genieMethod.isAllowsExecution());
 
-		result = genieMethod.execute(25, "C:/_mestrado/smis-test/tempfile.txt");
+		Object result = genieMethod.execute(25, "C:/_mestrado/smis-test/tempfile.txt");
 		assertEquals(Long.class, result.getClass());
 		assertEquals(new Long("25"), result);
 
@@ -198,9 +188,46 @@ public class GenieMethodTest {
 		code += "        return val;\n";
 		code += "    }";
 
-		GenieMethod genieMethod = genieMethodRepository.findByEntityId(12709553);
+		GenieMethod genieMethod = this.getGenieMethodTest1();
 		String sourceCode = genieMethod.getSourceCode();
 		assertNotNull(sourceCode);
 		assertEquals(code, sourceCode);
 	}
+
+	private GenieMethod getGenieMethodTest1() throws Exception {
+
+		if (genieMethodTest1 != null)
+			return genieMethodTest1;
+
+		String fqn = "org.javathena.core.utiles.Functions.parseIntToByte";
+		String params = "(int)";
+		String returnType = "byte";
+		GenieMethod genieMethod = genieMethodRepository.findByInterfaceElements(fqn, params, returnType);
+		return genieMethod;
+	}
+
+	private GenieMethod getGenieMethodTest2() throws Exception {
+
+		if (genieMethodTest2 != null)
+			return genieMethodTest2;
+
+		String fqn = "com.eteks.sweethome3d.model.Camera.convertTimeToTimeZone";
+		String params = "(long,java.lang.String)";
+		String returnType = "long";
+		GenieMethod genieMethod = genieMethodRepository.findByInterfaceElements(fqn, params, returnType);
+		return genieMethod;
+	}
+
+	private GenieMethod getGenieMethodTest3() throws Exception {
+
+		if (genieMethodTest3 != null)
+			return genieMethodTest3;
+
+		String fqn = "framework.ApplicationParameters.getAsInteger";
+		String params = "(java.lang.String,java.lang.Integer)";
+		String returnType = "java.lang.Integer";
+		GenieMethod genieMethod = genieMethodRepository.findByInterfaceElements(fqn, params, returnType);
+		return genieMethod;
+	}
+
 }

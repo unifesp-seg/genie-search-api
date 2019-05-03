@@ -194,7 +194,7 @@ public class GenieMethodTest {
 		assertEquals(code, sourceCode);
 	}
 
-	private GenieMethod getGenieMethodTest1() throws Exception {
+	private GenieMethod getGenieMethodTest1() {
 
 		if (genieMethodTest1 != null)
 			return genieMethodTest1;
@@ -206,7 +206,7 @@ public class GenieMethodTest {
 		return genieMethod;
 	}
 
-	private GenieMethod getGenieMethodTest2() throws Exception {
+	private GenieMethod getGenieMethodTest2() {
 
 		if (genieMethodTest2 != null)
 			return genieMethodTest2;
@@ -218,7 +218,7 @@ public class GenieMethodTest {
 		return genieMethod;
 	}
 
-	private GenieMethod getGenieMethodTest3() throws Exception {
+	private GenieMethod getGenieMethodTest3() {
 
 		if (genieMethodTest3 != null)
 			return genieMethodTest3;

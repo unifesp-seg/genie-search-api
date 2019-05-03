@@ -14,6 +14,7 @@ import java.util.Properties;
 
 import org.apache.commons.lang.StringUtils;
 
+import br.unifesp.ict.seg.geniesearchapi.infrastructure.GenieMethodRepository;
 import edu.uci.ics.sourcerer.tools.java.repo.model.JavaRepositoryFactory;
 import edu.uci.ics.sourcerer.util.io.arguments.ArgumentManager;
 import edu.uci.ics.sourcerer.utils.db.DatabaseConnectionFactory;
@@ -26,7 +27,7 @@ public class GenieSearchAPIConfig {
 	private static final String P_INPUT_REPO = "input-repo";
 	private static final String P_DATABASE_URL = "database-url";
 	private static final String P_DATABASE_USER = "database-user";
-	private static final String P_DATABASE_PASSWORD = "database-password";
+	public static final String P_DATABASE_PASSWORD = "database-password";
 	private static final String P_WEBSERVER_URL = "webserver-url";
 
 	private GenieSearchAPIConfig() {
@@ -40,7 +41,7 @@ public class GenieSearchAPIConfig {
 
 	}
 
-	private static boolean hasConfigFileName() {
+	public static boolean hasConfigFileName() {
 		URL url = ClassLoader.getSystemResource(configFileName);
 		return url != null;
 	}
@@ -99,6 +100,10 @@ public class GenieSearchAPIConfig {
 		postLoadProperties();
 	}
 
+	public static Properties getProperties() {
+		return properties;
+	}
+
 	private static void postLoadProperties() {
 
 		if (isValidProperties()) {
@@ -107,22 +112,6 @@ public class GenieSearchAPIConfig {
 		}
 
 		logConfigStatus();
-	}
-
-	public static boolean isValidProperties() {
-
-		if (properties == null)
-			return false;
-
-		// Properties keys verification
-		boolean checkProperties = properties.size() == 5;
-		checkProperties = properties.containsKey(P_INPUT_REPO);
-		checkProperties = properties.containsKey(P_DATABASE_URL);
-		checkProperties = properties.containsKey(P_DATABASE_USER);
-		checkProperties = properties.containsKey(P_DATABASE_PASSWORD);
-		checkProperties = properties.containsKey(P_WEBSERVER_URL);
-
-		return checkProperties;
 	}
 
 	private static void loadSourcererParamsFromProperties() {
@@ -151,7 +140,7 @@ public class GenieSearchAPIConfig {
 			example += "\n" + P_DATABASE_PASSWORD + " = 123";
 			example += "\n" + P_INPUT_REPO + " = http://localhost:8080\n";
 			String expectedPath = ClassLoader.getSystemResource("").getPath() + configFileName;
-			expectedPath = StringUtils.replaceOnce(expectedPath,"/","");
+			expectedPath = StringUtils.replaceOnce(expectedPath, "/", "");
 			LogUtils.getLogger().error("");
 			LogUtils.getLogger().error("Genie Search API - Erro ao carregar as propriedades de configuração");
 			LogUtils.getLogger().error("");
@@ -169,7 +158,7 @@ public class GenieSearchAPIConfig {
 		String loadFrom = "";
 		if (hasConfigFileName()) {
 			loadFrom = "Arquivo de configuração: " + ClassLoader.getSystemResource(configFileName).getPath();
-			loadFrom = StringUtils.replaceOnce(loadFrom,"/","");
+			loadFrom = StringUtils.replaceOnce(loadFrom, "/", "");
 		} else
 			loadFrom = "Configurações passadas por parâmetro via String args[]";
 
@@ -188,49 +177,34 @@ public class GenieSearchAPIConfig {
 		LogUtils.getLogger().info("");
 
 		// crawled-projects folder name verification
-		if (!"crawled-projects".equals(getCrawledProjectsPath().getFileName() + "")) {
+		if (!checkCrawledProjectsFolderName()) {
 			LogUtils.getLogger().error("");
 			LogUtils.getLogger().error("Pasta diferente de 'crawled-projects': " + ClassLoader.getSystemResource("") + configFileName);
 			LogUtils.getLogger().error("O valor atualmente usado é inválido: " + P_INPUT_REPO + " = " + getCrawledProjectsPath());
 		}
 
 		// Solr connection
-		String solrURL = GenieSearchAPIConfig.getSolrURL();
-		try {
-			URL url = new URL(solrURL);
-			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-			connection = (HttpURLConnection) url.openConnection();
-			connection.setRequestMethod("GET");
-			connection.connect();
-		} catch (Exception e) {
+		if (!checkOnlineSolrURL()) {
 			LogUtils.getLogger().error("");
-			LogUtils.getLogger().error("Solr OFFLINE: " + solrURL);
+			LogUtils.getLogger().error("Solr OFFLINE: " + getSolrURL());
 			LogUtils.getLogger().error("");
 		}
 
 		// Solr config folder
-		try {
-			String strPathA = GenieSearchAPIConfig.getSolrIndexPath() + "";
-			String strPathB = GenieSearchAPIConfig.getSolrReaderDirPath() + "";
-			if (!strPathA.equals(strPathB)) {
-				LogUtils.getLogger().error("");
-				LogUtils.getLogger().error("Solr Index Path esperado   : " + strPathA);
-				LogUtils.getLogger().error("Solr Index Path configurado: " + strPathB);
-				LogUtils.getLogger().error("");
-			}
-		} catch (Exception e) {
+		if (!checkSolrReaderDir()) {
 			LogUtils.getLogger().error("");
-			LogUtils.getLogger().error("Solr OFFLINE: " + solrURL);
+			LogUtils.getLogger().error("Solr Index Path esperado   : " + getSolrIndexPath());
+			LogUtils.getLogger().error("Solr Index Path configurado: " + getSolrReaderDirPath());
 			LogUtils.getLogger().error("");
 		}
 	}
 
 	private static void createDefaultFolders() {
-		
-		//Create subfolders, only if repo folder exists
-		if(!getRepoPath().toFile().isDirectory())
+
+		// Create subfolders, only if repo folder exists
+		if (!getRepoPath().toFile().isDirectory())
 			return;
-		
+
 		File dir = getSolrConfigPath().toFile();
 		if (!dir.isDirectory())
 			dir.mkdirs();
@@ -319,51 +293,129 @@ public class GenieSearchAPIConfig {
 		return Paths.get(strPath);
 	}
 
-	public static Path getSolrReaderDirPath() throws Exception {
+	public static Path getSolrReaderDirPath() {
 		// Solr connection
 		URL url = null;
 		String solrURL = GenieSearchAPIConfig.getSolrURL();
-		url = new URL(solrURL + "/admin/stats.jsp");
-		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+		try {
+			url = new URL(solrURL + "/admin/stats.jsp");
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
-		BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-		String inputLine;
-		String strToken = "org.apache.lucene.store.MMapDirectory@";
-		while ((inputLine = br.readLine()) != null) {
-			inputLine = StringUtils.trim(inputLine);
-			if (inputLine.startsWith(strToken))
-				break;
+			BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+			String inputLine;
+			String strToken = "org.apache.lucene.store.";
+			while ((inputLine = br.readLine()) != null) {
+				inputLine = StringUtils.trim(inputLine);
+				if (inputLine.startsWith(strToken))
+					break;
+			}
+			br.close();
+			String strPath = StringUtils.substringAfter(inputLine, "@");
+			strPath = StringUtils.substringBefore(strPath, " ");
+			return Paths.get(strPath);
+		} catch (Exception e) {
+			return null;
 		}
-		br.close();
-		String strPath = StringUtils.substringAfter(inputLine, strToken);
-		strPath = StringUtils.substringBefore(strPath, " ");
-		return Paths.get(strPath);
 	}
 
-	public static Integer getSolrNumDocs() throws Exception {
-		// Solr connection
-		URL url = null;
-		String solrURL = GenieSearchAPIConfig.getSolrURL();
-		url = new URL(solrURL + "/admin/stats.jsp");
-		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+	public static Integer getSolrNumDocs() {
+		try {
+			// Solr connection
+			URL url = null;
+			String solrURL = GenieSearchAPIConfig.getSolrURL();
+			url = new URL(solrURL + "/admin/stats.jsp");
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
-		BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-		String inputLine;
-		String strTokenPreviousLine = "<stat name=\"numDocs\" >";
-		while ((inputLine = br.readLine()) != null) {
-			inputLine = StringUtils.trim(inputLine);
-			if (inputLine.equals(strTokenPreviousLine)) {
-				inputLine = StringUtils.trim(br.readLine());
-				br.close();
-				return new Integer(inputLine);
+			BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+			String inputLine;
+			String strTokenPreviousLine = "<stat name=\"numDocs\" >";
+			while ((inputLine = br.readLine()) != null) {
+				inputLine = StringUtils.trim(inputLine);
+				if (inputLine.equals(strTokenPreviousLine)) {
+					inputLine = StringUtils.trim(br.readLine());
+					br.close();
+					return new Integer(inputLine);
+				}
 			}
+			br.close();
+			return null;
+		} catch (Exception e) {
+			return null;
 		}
-		br.close();
-		return null;
 	}
 
 	public static Path getThesauriPath() {
 		return Paths.get(getRepoPath().getParent().getParent() + "", "thesauri");
+	}
+
+	public static boolean isValidProperties() {
+
+		if (properties == null)
+			return false;
+
+		// Properties keys verification
+		boolean checkProperties = properties.size() == 5;
+		checkProperties = properties.containsKey(P_INPUT_REPO);
+		checkProperties = properties.containsKey(P_DATABASE_URL);
+		checkProperties = properties.containsKey(P_DATABASE_USER);
+		checkProperties = properties.containsKey(P_DATABASE_PASSWORD);
+		checkProperties = properties.containsKey(P_WEBSERVER_URL);
+
+		return checkProperties;
+	}
+
+	public static boolean checkRepoFolderExistence() {
+		return getRepoPath().toFile().isDirectory();
+	}
+
+	public static boolean checkCrawledProjectsFolderName() {
+		return "crawled-projects".equals(getCrawledProjectsPath().getFileName() + "");
+	}
+
+	public static boolean checkOnlineWebServerURL() {
+		try {
+			URL url = new URL(getWebServerURL());
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			connection = (HttpURLConnection) url.openConnection();
+			connection.setRequestMethod("GET");
+			connection.connect();
+			return connection.getResponseCode() == 200;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
+	public static boolean checkOnlineSolrURL() {
+		try {
+			URL url = new URL(getSolrURL());
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			connection = (HttpURLConnection) url.openConnection();
+			connection.setRequestMethod("GET");
+			connection.connect();
+			return connection.getResponseCode() == 200;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
+	public static boolean checkSolrReaderDir() {
+		String strPathA = getSolrIndexPath() + "";
+		String strPathB = getSolrReaderDirPath() + "";
+		return strPathA.equals(strPathB);
+	}
+
+	public static boolean checkDBConnection() {
+		return new GenieMethodRepository().checkConnection();
+	}
+
+	public static boolean checkAll() {
+		return isValidProperties() && checkRepoFolderExistence() && checkCrawledProjectsFolderName() && checkOnlineWebServerURL() && checkOnlineSolrURL() && checkSolrReaderDir() && checkDBConnection();
+	}
+
+	public static String getRepoName() {
+		if (!isValidProperties() || !getRepoPath().toFile().isDirectory())
+			return "";
+		return getRepoPath().getFileName() + "";
 	}
 
 }

@@ -23,13 +23,13 @@ public class MethodRepositoryTest extends BaseRepository {
 	}
 	
 	@Test
-	public void countAllInterfaceMetrics() throws Exception {
+	public void countAllInterfaceMetrics() {
 		int total = repository.countAllInterfaceMetrics();
 		assertEquals(266941, total);
 	}
 	
 	@Test
-	public void  findByEntityId() throws Exception {
+	public void  findByEntityId() {
 		
 		String fqn = "org.javathena.core.utiles.Functions.parseIntToByte";
 		String params = "(int)"; 

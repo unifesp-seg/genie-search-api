@@ -243,10 +243,15 @@ public class GenieMethod {
 	//
 	public String getSourceCode() {
 		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Getting source code...");
-        byte[] result = FileAdapter.lookupByEntityID(this.entityId.intValue());
+		byte[] result = null;
+		try {
+			result = FileAdapter.lookupByEntityID(this.entityId.intValue());
+		} catch (NullPointerException e) {
+			return "Source not found";
+		}
 		return new String(result);
 	}
-	
+
 	//
 	// SLICE AND EXECUTION PROCESS
 	//
@@ -265,14 +270,14 @@ public class GenieMethod {
 	public boolean isContainsCompiledJar() {
 		return this.getCompiledJarPath().toFile().isFile();
 	}
-	
+
 	public boolean slice() {
 		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Slicing...");
 
-		//Dependences
-		if(this.isContainsSlicedFile())
+		// Dependences
+		if (this.isContainsSlicedFile())
 			return true;
-		
+
 		Slicer slicer = SlicerFactory.createSlicer();
 		if (slicer == null) {
 			return false;
@@ -287,10 +292,9 @@ public class GenieMethod {
 		SlicerDebug.debug("[SlicerFactory]slice:\n" + si.getInternalEntities().toString().replace(",", "\n").replace("[", "").replace("]", ""));
 		byte[] input = result.toZipFile();
 
-		Path zipFilePath = Paths.get(GenieSearchAPIConfig.getSlicedPath()+"", entityId + ".zip");
 		FileOutputStream fos;
 		try {
-			fos = new FileOutputStream(zipFilePath.toFile());
+			fos = new FileOutputStream(this.getSlicedFilePath().toFile());
 			fos.write(input);
 			fos.close();
 		} catch (Exception e) {
@@ -300,27 +304,26 @@ public class GenieMethod {
 
 		return true;
 	}
-	
+
 	private boolean extractSlicedZipFile() {
 		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Extracting sliced zip file...");
 
-		String zipFile = Paths.get(GenieSearchAPIConfig.getSlicedPath()+"", this.entityId + ".zip")+"";
-		File outputDir = Paths.get(GenieSearchAPIConfig.getExtractTempPath()+"", this.entityId+"", "src").toFile();
-		if(!outputDir.isDirectory())
+		File outputDir = Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", this.entityId + "", "src").toFile();
+		if (!outputDir.isDirectory())
 			outputDir.mkdirs();
-		
-		ManipulateFile.extract(zipFile, outputDir.getPath());
+
+		ManipulateFile.extract(this.getSlicedFilePath()+"", outputDir.getPath());
 		return true;
 	}
 
 	private boolean generateBuildXml() {
 		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Generating Build.xml...");
 
-		Path tempEntityPath = Paths.get(GenieSearchAPIConfig.getExtractTempPath()+"", this.entityId +"");
-		Path buildFilePath = Paths.get(tempEntityPath+"","build.xml");
-		Path buildDirPath = Paths.get(tempEntityPath+"","build");
-		Path srcDirPath = Paths.get(tempEntityPath+"","src");
-		Path jarFileDestPath = Paths.get(GenieSearchAPIConfig.getJarPath()+"", this.entityId+".jar");
+		Path tempEntityPath = Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", this.entityId + "");
+		Path buildFilePath = Paths.get(tempEntityPath + "", "build.xml");
+		Path buildDirPath = Paths.get(tempEntityPath + "", "build");
+		Path srcDirPath = Paths.get(tempEntityPath + "", "src");
+		Path jarFileDestPath = Paths.get(GenieSearchAPIConfig.getJarPath() + "", this.entityId + ".jar");
 		BufferedWriter xml;
 		try {
 			// TODO Path of javac can't be hard coding
@@ -329,7 +332,7 @@ public class GenieMethod {
 			xml.write("\t<target name=\"compile\">\n");
 			xml.write("\t\t<mkdir dir=\"" + buildDirPath + "\" />\n");
 			xml.write("\t\t<javac srcdir=\"" + srcDirPath + "\"\n");
-			xml.write("\t\t       destdir=\"" + buildDirPath + "\"\n" );
+			xml.write("\t\t       destdir=\"" + buildDirPath + "\"\n");
 			xml.write("\t\t       executable=\"C:/Program Files/Java/jdk1.8.0_191/bin/javac.exe\" fork=\"true\"  taskname=\"javac1.8\">\n");
 			xml.write("\t\t</javac>\n");
 			xml.write("\t\t<jar destfile=\"" + jarFileDestPath + "\"\n");
@@ -347,62 +350,62 @@ public class GenieMethod {
 
 	public boolean generateJar() throws Exception {
 		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Generating compiled jar...");
-		
-		//Dependences
+
+		// Dependences
 		boolean resultProess = true;
 		resultProess = this.slice();
 		resultProess = this.extractSlicedZipFile();
 		resultProess = this.generateBuildXml();
-		if(!resultProess)
+		if (!resultProess)
 			throw new RuntimeException("Erro na complição do Método com entityId = " + this.entityId);
-		
-		File buildFile = Paths.get(GenieSearchAPIConfig.getExtractTempPath()+"", entityId+"","build.xml").toFile();
+
+		File buildFile = Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", entityId + "", "build.xml").toFile();
 
 		// Prepare Ant project
 		Project project = new Project();
-        project.setUserProperty("ant.file", buildFile.getAbsolutePath());
- 
-        // Capture event for Ant script build start / stop / failure
-        try {
-            project.fireBuildStarted();
-            project.init();
-            ProjectHelper projectHelper = ProjectHelper.getProjectHelper();
-            project.addReference("ant.projectHelper", projectHelper);
-            projectHelper.parse(project, buildFile);
-             
-            // If no target specified then default target will be executed.
-            project.executeTarget("compile");
-            project.fireBuildFinished(null);
-        } catch (BuildException buildException) {
-            buildException.printStackTrace();
-            return false;
-        }
+		project.setUserProperty("ant.file", buildFile.getAbsolutePath());
+
+		// Capture event for Ant script build start / stop / failure
+		try {
+			project.fireBuildStarted();
+			project.init();
+			ProjectHelper projectHelper = ProjectHelper.getProjectHelper();
+			project.addReference("ant.projectHelper", projectHelper);
+			projectHelper.parse(project, buildFile);
+
+			// If no target specified then default target will be executed.
+			project.executeTarget("compile");
+			project.fireBuildFinished(null);
+		} catch (BuildException buildException) {
+			buildException.printStackTrace();
+			return false;
+		}
 		return true;
 	}
 
 	public Object execute(Object... executeParamsValues) throws Exception {
-		
+
 		String strArgs = "";
-		for(Object arg : executeParamsValues) {
-			strArgs += arg+", ";
+		for (Object arg : executeParamsValues) {
+			strArgs += arg + ", ";
 		}
 		strArgs = StringUtils.removeEnd(strArgs, ", ");
-		
+
 		return this.execute(strArgs);
 	}
-	
+
 	public Object execute(String executeParamsValues) throws Exception {
 		LogUtils.getLogger().info("Entity_id: " + this.entityId + " Executing method...");
 
-		//Validation
+		// Validation
 		if (!this.isLoadedDB)
 			throw new RuntimeException("Método não carregado no Banco de Dados. EntityId = " + this.entityId);
 
-		//Dependence
-		if(!this.isContainsCompiledJar()) {
+		// Dependence
+		if (!this.isContainsCompiledJar()) {
 			boolean resultProess = this.generateJar();
-			
-			if(!resultProess)
+
+			if (!resultProess)
 				throw new RuntimeException("Erro na complição do Método com entityId = " + this.entityId);
 		}
 
@@ -410,24 +413,24 @@ public class GenieMethod {
 		Class<?>[] reflectionParams = this.getReflectionParams();
 		Method reflectionMethod = reflectionClass.getMethod(this.getMethodName(), reflectionParams);
 
-		//Validation
+		// Validation
 		if (!this.isAllowsExecution())
 			throw new RuntimeException("Execução dinâmica não permitida para o Método com entityId = " + this.entityId);
 
-		//Validation
+		// Validation
 		if (!this.isEexecuteParamsValuesValid(executeParamsValues))
 			throw new RuntimeException("Parâmetros inválidos. Considere: " + this.getParams());
 
 		Object[] executionParamValues = this.getExecutionParamValues(executeParamsValues);
-		
-		//Validation
+
+		// Validation
 		for (Object executionParamValue : executionParamValues) {
-			if(executionParamValue == null)
+			if (executionParamValue == null)
 				throw new RuntimeException("Valor de algum parâmetro não pode ser convertido para o respectivo tipo. Considere: " + this.getParams());
 		}
-		
-		//The method is executed by a thread to have a timeout implemented
-		//ThreadExecute threadExec = new ThreadExecute(myClass, values, method);
+
+		// The method is executed by a thread to have a timeout implemented
+		// ThreadExecute threadExec = new ThreadExecute(myClass, values, method);
 		ThreadExecObject threadExec = new ThreadExecObject(reflectionClass, executionParamValues, reflectionMethod);
 		Thread thread = new Thread(threadExec);
 		thread.start();
@@ -437,11 +440,11 @@ public class GenieMethod {
 			thread.interrupt();
 			throw new RuntimeException("Timeout na execução do Método com entityId = " + this.entityId);
 		}
-		
+
 		return threadExec.getObj();
 	}
-	
-	Class<?>[] getReflectionParams(){
+
+	Class<?>[] getReflectionParams() {
 		Class<?>[] reflectionParams = new Class<?>[this.getTotalParams()];
 		for (int i = 0; i < this.getTotalParams(); i++) {
 			reflectionParams[i] = this.getExecutionClassByName(this.getParamsNames()[i]);
@@ -449,7 +452,7 @@ public class GenieMethod {
 
 		return reflectionParams;
 	}
-	
+
 	private Class<?> getReflectionClass() throws Exception {
 		Class<?> reflectionClass = null;
 
@@ -464,42 +467,42 @@ public class GenieMethod {
 
 		return reflectionClass;
 	}
-	
+
 	public boolean isAllowsExecution() {
-		
-		//Main rules
-		if(!isLoadedDB || !(isCrawled() || isJavaLibrary()) || !isStatic() || this.totalParams == 0)
+
+		// Main rules
+		if (!isLoadedDB || !(isCrawled() || isJavaLibrary()) || !isStatic() || this.totalParams == 0)
 			return false;
-		
-		//Valid params
+
+		// Valid params
 		Class<?>[] reflectionParams = this.getReflectionParams();
-		for(Class<?> reflectionParam : reflectionParams) {
-			if(reflectionParam == null)
+		for (Class<?> reflectionParam : reflectionParams) {
+			if (reflectionParam == null)
 				return false;
 		}
-		
-		//Valid return
-		if(getExecutionClassByName(returnType) == null)
+
+		// Valid return
+		if (getExecutionClassByName(returnType) == null)
 			return false;
-		
+
 		return true;
 	}
-	
+
 	boolean isEexecuteParamsValuesValid(String executeParamsValues) {
 		String[] executeParamsValuesAsArray = this.getExecuteParamsValuesAsArray(executeParamsValues);
 		return executeParamsValuesAsArray != null && executeParamsValuesAsArray.length == this.getTotalParams();
 	}
-	
+
 	private String[] getExecuteParamsValuesAsArray(String executeParamsValues) {
-		if(StringUtils.isBlank(executeParamsValues))
+		if (StringUtils.isBlank(executeParamsValues))
 			return null;
-		
+
 		String params = StringUtils.trim(executeParamsValues);
 		String[] args = StringUtils.split(params, ",");
-		
+
 		return args;
 	}
-	
+
 	private Class<?> getExecutionClassByName(String className) {
 
 		if ("String".equalsIgnoreCase(className) || "java.lang.String".equals(className))
@@ -542,7 +545,7 @@ public class GenieMethod {
 		return null;
 	}
 
-	private Object[] getExecutionParamValues(String executeParamsValues){
+	private Object[] getExecutionParamValues(String executeParamsValues) {
 		String[] values = this.getExecuteParamsValuesAsArray(executeParamsValues);
 		Class<?>[] classes = this.getReflectionParams();
 
@@ -551,10 +554,10 @@ public class GenieMethod {
 		for (int i = 0; i < this.getTotalParams(); i++) {
 			executionParamValues[i] = this.getExecutionClassValue(values[i], classes[i]);
 		}
-		
+
 		return executionParamValues;
 	}
-	
+
 	private Object getExecutionClassValue(String value, Class<?> className) {
 
 		if (className.getName().toLowerCase().contains("string"))
@@ -578,28 +581,28 @@ public class GenieMethod {
 
 		return null;
 	}
-	
+
 	public boolean clearMethodFiles() throws IOException {
-		
+
 		boolean cleaned = true;
-		
-		if(this.isContainsSlicedFile()) {
+
+		if (this.isContainsSlicedFile()) {
 			LogUtils.getLogger().info("Entity_id: " + this.entityId + " Deleting: " + this.getSlicedFilePath());
 			cleaned = this.getSlicedFilePath().toFile().delete();
 		}
-		
-		File tempIdDir = Paths.get(GenieSearchAPIConfig.getExtractTempPath()+"", this.entityId+"").toFile();
-		if(tempIdDir.isDirectory()) {
+
+		File tempIdDir = Paths.get(GenieSearchAPIConfig.getExtractTempPath() + "", this.entityId + "").toFile();
+		if (tempIdDir.isDirectory()) {
 			LogUtils.getLogger().info("Entity_id: " + this.entityId + " Deleting: " + tempIdDir);
 			FileUtils.deleteDirectory(tempIdDir);
 			cleaned = !tempIdDir.isDirectory();
 		}
-		
-		if(this.isContainsCompiledJar()) {
+
+		if (this.isContainsCompiledJar()) {
 			LogUtils.getLogger().info("Entity_id: " + this.entityId + " Deleting: " + getCompiledJarPath());
 			cleaned = this.getCompiledJarPath().toFile().delete();
 		}
-		
+
 		return cleaned;
 	}
 

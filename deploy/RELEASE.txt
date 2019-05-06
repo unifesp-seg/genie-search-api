@@ -1,4 +1,14 @@
 ********************
+Version 1.6.11
+
+Fixes:
+
+	- getSourceCode();
+
+Features:
+
+
+********************
 Version 1.6.10
 
 Fixes:

@@ -1,4 +1,14 @@
 ********************
+Version 1.6.12
+
+Fixes:
+
+	- javac Ant task no hard code java path
+
+Features:
+
+
+********************
 Version 1.6.11
 
 Fixes:

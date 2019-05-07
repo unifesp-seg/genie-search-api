@@ -326,14 +326,13 @@ public class GenieMethod {
 		Path jarFileDestPath = Paths.get(GenieSearchAPIConfig.getJarPath() + "", this.entityId + ".jar");
 		BufferedWriter xml;
 		try {
-			// TODO Path of javac can't be hard coding
 			xml = Files.newBufferedWriter(buildFilePath);
 			xml.write("<project>\n");
 			xml.write("\t<target name=\"compile\">\n");
 			xml.write("\t\t<mkdir dir=\"" + buildDirPath + "\" />\n");
 			xml.write("\t\t<javac srcdir=\"" + srcDirPath + "\"\n");
 			xml.write("\t\t       destdir=\"" + buildDirPath + "\"\n");
-			xml.write("\t\t       executable=\"C:/Program Files/Java/jdk1.8.0_191/bin/javac.exe\" fork=\"true\"  taskname=\"javac1.8\">\n");
+			xml.write("\t\t       fork=\"true\"  taskname=\"javac1.8\">\n");
 			xml.write("\t\t</javac>\n");
 			xml.write("\t\t<jar destfile=\"" + jarFileDestPath + "\"\n");
 			xml.write("\t\t     basedir=\"" + buildDirPath + "\" />\n");
@@ -488,7 +487,7 @@ public class GenieMethod {
 		return true;
 	}
 
-	boolean isEexecuteParamsValuesValid(String executeParamsValues) {
+	public boolean isEexecuteParamsValuesValid(String executeParamsValues) {
 		String[] executeParamsValuesAsArray = this.getExecuteParamsValuesAsArray(executeParamsValues);
 		return executeParamsValuesAsArray != null && executeParamsValuesAsArray.length == this.getTotalParams();
 	}

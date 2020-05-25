@@ -59,7 +59,7 @@ public class AQEApproach {
 
 	public void loadMethodInterface(String className, String methodName, String returnType, String params) throws Exception {
 
-		this.classNameTerms = this.getNameTerms(methodName);
+		this.classNameTerms = this.getNameTerms(className);
 		this.methodNameTerms = this.getNameTerms(methodName);
 		this.returnTypeTerms = this.getReturnTypeTerms(returnType);
 		this.paramsTerms = this.getParamsTerms(params);

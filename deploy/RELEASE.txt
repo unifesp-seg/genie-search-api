@@ -1,4 +1,14 @@
 ********************
+Version 1.6.13
+
+Fixes:
+
+	- AQEApproach.loadMethodInterface(String className, String methodName, String returnType, String params): Assign orders
+
+Features:
+
+
+********************
 Version 1.6.12
 
 Fixes:

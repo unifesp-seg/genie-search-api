@@ -4,9 +4,10 @@ import java.io.FileReader;
 import java.io.Reader;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.StringTokenizer;
-import java.util.stream.Collectors;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
@@ -121,8 +122,8 @@ public class RelatedWords {
 	private static void loadCodeRelated(RelatedWordsResult relatedWordsResult, String word) throws Exception {
 		RelatedWordsResult relatedCodeResult = getSynonymsAndAntonymsCodeRelated(word);
 		
-		List<String> syns = new ArrayList<>(relatedCodeResult.getCodeRelatedSyns());
-		List<String> ants = new ArrayList<>(relatedCodeResult.getCodeRelatedAntons());
+		List<String> syns = new ArrayList<String>(relatedCodeResult.getCodeRelatedSyns());
+		List<String> ants = new ArrayList<String>(relatedCodeResult.getCodeRelatedAntons());
 		
 		for (String syn : relatedCodeResult.getCodeRelatedSyns()) {
 			relatedCodeResult = getSynonymsAndAntonymsCodeRelated(syn);
@@ -140,8 +141,16 @@ public class RelatedWords {
 		while(ants.remove(word));
 
 		//Remove duplicates
-		syns = syns.stream().distinct().collect(Collectors.toList());
-		ants = ants.stream().distinct().collect(Collectors.toList());
+		Set<String> setSyns = new HashSet<>(syns);
+		syns.clear();
+		syns.addAll(setSyns);
+		Set<String> setAnts = new HashSet<>(ants);
+		ants.clear();
+		ants.addAll(setAnts);
+		
+//		//Remove duplicates
+//		syns = syns.stream().distinct().collect(Collectors.toList());
+//		ants = ants.stream().distinct().collect(Collectors.toList());
 		
 		
 		relatedWordsResult.getCodeRelatedSyns().addAll(syns);

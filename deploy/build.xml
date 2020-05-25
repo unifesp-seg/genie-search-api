@@ -4,10 +4,10 @@
 
 	<!-- Propriedades -->
     <property environment="env"/>
-	<property name="version" value="1.6.12" />
+	<property name="version" value="1.6.13" />
 	<property name="bin" location="../target/classes" />
 	<property name="dist" location="../dist" />
-	<property name="maven-repo" location="C:/Users/\adrianocarv/.m2/repository" />
+	<property name="maven-repo" location="C:/Users/User/.m2/repository" />
 	<property name="maven-jar-path" value="br/unifesp/ict/seg/genie-search-api" />
 	
 	<!-- Build do aplicativo -->

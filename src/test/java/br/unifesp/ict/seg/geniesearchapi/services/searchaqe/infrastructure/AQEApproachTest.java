@@ -7,9 +7,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure.AQEApproach;
-import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure.QueryTerm;
-
 
 public class AQEApproachTest {
 	

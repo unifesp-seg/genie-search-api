@@ -62,8 +62,14 @@
 			<version>1.0</version>
 		</dependency>
 
+		<!-- dependency used for XLSX file format -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>3.17</version>
+		</dependency>
+
 	</dependencies>
-	
 	
   <build>
 

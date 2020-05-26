@@ -348,6 +348,10 @@ public class GenieSearchAPIConfig {
 		return Paths.get(getRepoPath().getParent().getParent() + "", "thesauri");
 	}
 
+	public static Path getRepoNotesPath() {
+		return Paths.get(getRepoPath()+"", getRepoName() + "_notes.xlsx");
+	}
+
 	public static boolean isValidProperties() {
 
 		if (properties == null)

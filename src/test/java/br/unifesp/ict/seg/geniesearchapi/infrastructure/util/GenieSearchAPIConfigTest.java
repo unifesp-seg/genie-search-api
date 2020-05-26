@@ -20,8 +20,8 @@ public class GenieSearchAPIConfigTest {
 
 	@Test
 	public void loadFromFile() throws Exception {
-		assertEquals(Paths.get("D:/Sourcerer_portable/repositories/test_repo/crawled-projects") + "", GenieSearchAPIConfig.getCrawledProjectsPath() + "");
-		assertEquals("jdbc:mysql://localhost:3306/test_repo", GenieSearchAPIConfig.getDatabaseURL());
+		assertEquals(Paths.get("F:/sourcerer_portable/repositories/genie_search_api_test/crawled-projects") + "", GenieSearchAPIConfig.getCrawledProjectsPath() + "");
+		assertEquals("jdbc:mysql://localhost:3306/genie_search_api_test", GenieSearchAPIConfig.getDatabaseURL());
 		assertEquals("root", GenieSearchAPIConfig.getDatabaseUser());
 		assertEquals("123", GenieSearchAPIConfig.getDatabasePassword());
 		assertEquals("http://localhost:8080", GenieSearchAPIConfig.getWebServerURL());
@@ -52,15 +52,15 @@ public class GenieSearchAPIConfigTest {
 		args[1] = "--database-user=root" + "-sys";
 		GenieSearchAPIConfig.loadProperties(args);
 		assertEquals(Paths.get("D:/Sourcerer_portable/repositories/test_repo-sys/crawled-projects") + "", GenieSearchAPIConfig.getCrawledProjectsPath() + "");
-		assertEquals("jdbc:mysql://localhost:3306/test_repo", GenieSearchAPIConfig.getDatabaseURL());
+		assertEquals("jdbc:mysql://localhost:3306/genie_search_api_test", GenieSearchAPIConfig.getDatabaseURL());
 		assertEquals("root-sys", GenieSearchAPIConfig.getDatabaseUser());
 		assertEquals("123", GenieSearchAPIConfig.getDatabasePassword());
 		assertEquals("http://localhost:8080", GenieSearchAPIConfig.getWebServerURL());
 
 		// Reload from config file
 		GenieSearchAPIConfig.loadProperties();
-		assertEquals(Paths.get("D:/Sourcerer_portable/repositories/test_repo/crawled-projects") + "", GenieSearchAPIConfig.getCrawledProjectsPath() + "");
-		assertEquals("jdbc:mysql://localhost:3306/test_repo", GenieSearchAPIConfig.getDatabaseURL());
+		assertEquals(Paths.get("F:/sourcerer_portable/repositories/genie_search_api_test/crawled-projects") + "", GenieSearchAPIConfig.getCrawledProjectsPath() + "");
+		assertEquals("jdbc:mysql://localhost:3306/genie_search_api_test", GenieSearchAPIConfig.getDatabaseURL());
 		assertEquals("root", GenieSearchAPIConfig.getDatabaseUser());
 		assertEquals("123", GenieSearchAPIConfig.getDatabasePassword());
 		assertEquals("http://localhost:8080", GenieSearchAPIConfig.getWebServerURL());
@@ -98,7 +98,7 @@ public class GenieSearchAPIConfigTest {
 
 	@Test
 	public void checkSolrNumDocs() {
-		assertEquals(new Integer(307784), GenieSearchAPIConfig.getSolrNumDocs());
+		assertEquals(new Integer(335032), GenieSearchAPIConfig.getSolrNumDocs());
 	}
 	
 	@Test
@@ -110,6 +110,6 @@ public class GenieSearchAPIConfigTest {
 		assertTrue(GenieSearchAPIConfig.checkSolrReaderDir());
 		assertTrue(GenieSearchAPIConfig.checkDBConnection());
 		assertTrue(GenieSearchAPIConfig.checkAll());
-		assertEquals("test_repo",GenieSearchAPIConfig.getRepoName());
+		assertEquals("genie_search_api_test",GenieSearchAPIConfig.getRepoName());
 	}
 }

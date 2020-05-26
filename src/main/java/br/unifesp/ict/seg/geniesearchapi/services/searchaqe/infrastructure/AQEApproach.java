@@ -91,6 +91,10 @@ public class AQEApproach {
 	}
 
 	List<QueryTerm> getNameTerms(String name){
+		
+		if(name == null)
+			return new ArrayList<QueryTerm>();
+		
 		String names = JavaTermExtractor.getFQNTermsAsString(name);
 
 		//Linha comentada em 28/02/2016

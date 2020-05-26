@@ -4,7 +4,7 @@
 
 	<!-- Propriedades -->
     <property environment="env"/>
-	<property name="version" value="1.6.13" />
+	<property name="version" value="1.6.14" />
 	<property name="bin" location="../target/classes" />
 	<property name="dist" location="../dist" />
 	<property name="maven-repo" location="C:/Users/User/.m2/repository" />

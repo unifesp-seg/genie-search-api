@@ -25,7 +25,7 @@ public class MethodRepositoryTest extends BaseRepository {
 	@Test
 	public void countAllInterfaceMetrics() {
 		int total = repository.countAllInterfaceMetrics();
-		assertEquals(266941, total);
+		assertEquals(289161, total);
 	}
 	
 	@Test

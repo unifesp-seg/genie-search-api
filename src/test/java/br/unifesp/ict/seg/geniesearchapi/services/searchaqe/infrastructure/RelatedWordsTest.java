@@ -2,11 +2,20 @@ package br.unifesp.ict.seg.geniesearchapi.services.searchaqe.infrastructure;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.IOException;
+
+import org.junit.Before;
 import org.junit.Test;
 
+import br.unifesp.ict.seg.geniesearchapi.infrastructure.util.GenieSearchAPIConfig;
 import br.unifesp.ict.seg.geniesearchapi.services.searchaqe.domain.RelatedWordsResult;
 
 public class RelatedWordsTest {
+
+	@Before
+	public void initialize() throws IOException {
+		GenieSearchAPIConfig.loadProperties();
+	}
 
 	@Test
 	public void relatedWords() throws Exception {
@@ -33,10 +42,10 @@ public class RelatedWordsTest {
 
 		assertEquals("zip", relatedWordsResult.getCodeRelatedSyns().get(0));
 
-		assertEquals("unzip", relatedWordsResult.getCodeRelatedAntons().get(0));
-		assertEquals("extract", relatedWordsResult.getCodeRelatedAntons().get(1));
-		assertEquals("decompress", relatedWordsResult.getCodeRelatedAntons().get(2));
-		assertEquals("uncompress", relatedWordsResult.getCodeRelatedAntons().get(3));
+		assertEquals("extract", relatedWordsResult.getCodeRelatedAntons().get(0));
+		assertEquals("decompress", relatedWordsResult.getCodeRelatedAntons().get(1));
+		assertEquals("uncompress", relatedWordsResult.getCodeRelatedAntons().get(2));
+		assertEquals("unzip", relatedWordsResult.getCodeRelatedAntons().get(3));
 	}
 
 	@Test

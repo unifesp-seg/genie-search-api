@@ -98,7 +98,7 @@ public class SourcererQueryBuilderTest {
 		SourcererQueryBuilder sourcererQueryBuilder = new SourcererQueryBuilder(expanders, relaxReturn, relaxParams, contextRelevants, filterMethodNameTermsByParameter);
 		SearchResult searchResult = sourcererQueryBuilder.search(m, r, p);
 		int totalFound = searchResult.getNumFound();
-		assertEquals(53,totalFound);
+		assertEquals(35,totalFound);
 		
 		sourcererQueryBuilder = new SourcererQueryBuilder(expanders, true, true, contextRelevants, filterMethodNameTermsByParameter);
 		searchResult = sourcererQueryBuilder.search(m, r, p);

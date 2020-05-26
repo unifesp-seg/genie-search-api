@@ -155,6 +155,7 @@ public class GenieMethodTest {
 		assertEquals(new Long("25"), result);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Rule
 	public ExpectedException expectedEx = ExpectedException.none();
 

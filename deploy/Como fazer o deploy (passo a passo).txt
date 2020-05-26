@@ -7,3 +7,5 @@
 3. Executar o build.xml
 
 4. Comitar as alterações no GitHub
+
+5. Atualizar a versão na dependência do Maven nos projetos que usam este componentes, por exemplo: i-code-genie, interface-metrics etc

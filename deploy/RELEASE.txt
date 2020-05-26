@@ -1,4 +1,14 @@
 ********************
+Version 1.6.14
+
+Fixes:
+
+	- AQEApproach.List<QueryTerm> getNameTerms(String name): npe treatment
+
+Features:
+
+
+********************
 Version 1.6.13
 
 Fixes:

@@ -7,16 +7,25 @@
 	<property name="version" value="1.7.0" />
 	<property name="bin" location="../target/classes" />
 	<property name="dist" location="../dist" />
-	<property name="maven-repo" location="C:/Users/User/.m2/repository" />
+	<property name="deploy" location="../deploy" />
+	<property name="maven-repo" location="C:/Users/adria/.m2/repository" />
+	<property name="maven-jaws-path" value="edu/smu/tspell/wordnet/jaws-bin/1.0" />
+	<property name="maven-sourcerer-services-path" value="edu/uci/ics/sourcerer/sourcerer-services/1.0" />
 	<property name="maven-jar-path" value="br/unifesp/ict/seg/genie-search-api" />
 	
+	<!-- Maven Dependences -->
+	<target name="maven-dependences">
+		<copy file="${deploy}/jaws-bin-1.0.jar" todir="${maven-repo}/${maven-jaws-path}"/>
+		<copy file="${deploy}/sourcerer-services-1.0.jar" todir="${maven-repo}/${maven-sourcerer-services-path}"/>
+	</target>
+
 	<!-- Build do aplicativo -->
 	<target name="build">
 		<jar destfile="${dist}/genie-search-api-${version}.jar" basedir="${bin}" excludes="**/geniesearchapi.properties"/>
 	</target>
 
 	<!-- Maven Deploy -->
-	<target name="maven-deploy" depends="build">
+	<target name="maven-deploy" depends="maven-dependences, build">
 		<copy file="${dist}/genie-search-api-${version}.jar" todir="${maven-repo}/${maven-jar-path}/${version}"/>
 	</target>
 

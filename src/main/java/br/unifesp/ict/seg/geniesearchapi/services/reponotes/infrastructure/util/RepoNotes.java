@@ -22,41 +22,38 @@ public class RepoNotes {
 	private static void loadProperties() throws Exception {
 
 		properties = new Properties();
-		
+
 		File excelFile = GenieSearchAPIConfig.getRepoNotesPath().toFile();
-	    FileInputStream fis = new FileInputStream(excelFile);
+		FileInputStream fis = new FileInputStream(excelFile);
 
-	    XSSFWorkbook workbook = new XSSFWorkbook(fis);
-	    XSSFSheet sheet = workbook.getSheet("Check");
-	    
-	    Iterator<Row> rowIt = sheet.iterator();
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet("Check");
 
-	    while(rowIt.hasNext()) {
-	      Row row = rowIt.next();
-	      
-	      String key = row.getCell(0).getStringCellValue();
-	      String value = "";
-	      try {
-	    	  value = row.getCell(1).getStringCellValue();
-	      } catch (IllegalStateException e) {
-	    	  value = StringUtils.removeSuffix(row.getCell(1).getNumericCellValue() + "",".0");
+		Iterator<Row> rowIt = sheet.iterator();
+
+		while (rowIt.hasNext()) {
+			Row row = rowIt.next();
+
+			String key = row.getCell(0).getStringCellValue();
+			String value = "";
+			try {
+				value = row.getCell(1).getStringCellValue();
+			} catch (IllegalStateException e) {
+				value = ((long) row.getCell(1).getNumericCellValue()) + "";
+			}
+			properties.setProperty(key, value);
 		}
-	      
-	      System.out.println(key + " - " + value);
-	      
-	      properties.setProperty(key, value);
-	    }
 
-	    workbook.close();
-	    fis.close();
+		workbook.close();
+		fis.close();
 	}
-	
+
 	public static Properties getProperties() throws Exception {
-		
-		if(properties == null)
+
+		if (properties == null)
 			loadProperties();
-		
-		return properties; 
+
+		return properties;
 	}
 
 }
